@@ -53,6 +53,8 @@ int init () {
     glBindBuffer(GL_ARRAY_BUFFER, VertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(VertexBufferData), VertexBufferData, GL_STATIC_DRAW);
 
+
+
     FragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
     fsCode = FileToString("FragmentShader.fs").c_str();
     glShaderSource(FragmentShaderID, 1, &fsCode, NULL);
@@ -76,8 +78,8 @@ int init () {
     }
 
     Program = glCreateProgram();
-    glAttachShader (Program, FragmentShaderID);
     glAttachShader (Program, VertexShaderID);
+    glAttachShader (Program, FragmentShaderID);
 
 
     glLinkProgram (Program);
