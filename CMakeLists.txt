@@ -43,7 +43,9 @@ add_executable(plotTwist
         Common/Display.cpp
         Common/Display.hpp
 	Common/Control.cpp
-	Common/Control.hpp)
+        Common/Control.hpp
+        Common/Reshape.cpp
+        Common/Reshape.hpp)
 
 ########################################################
 # Linking & stuff

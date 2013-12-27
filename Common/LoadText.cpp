@@ -11,7 +11,7 @@
 
 #include "LoadText.hpp"
 
-
+const char* ReturnShaderCode;
 
 using namespace std;
 
@@ -22,9 +22,11 @@ string FileToString (const char* Shader) {
 
     if(ShaderStream.is_open()){
         string Line = "";
-        while(getline(ShaderStream, Line))
-        ShaderCode += "\n" + Line;
+        while(getline(ShaderStream, Line)){
+            ShaderCode += "\n" + Line;
+        }
         ShaderStream.close();
+
     }else{
         printf("Impossible to open. Are you in the right directory ? Don't forget to read the FAQ !\n");
         return 0;

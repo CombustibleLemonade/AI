@@ -13,10 +13,10 @@
 using namespace std;
 
 int Fullscreen = 0;
-float Zoom = 0.5;
+float Zoom = 500;
 
-void Keyboard (unsigned char key, int x, int y) {
-    if (key == 27) {
+void Keyboard (unsigned char Key, int x, int y) {
+    if (Key == 27) {
         if (!Fullscreen){
             glutFullScreen();
             Fullscreen = 1;
@@ -28,20 +28,18 @@ void Keyboard (unsigned char key, int x, int y) {
     }
 }
 
-void Mouse (int button, int state, int x, int y){
-    if (button == 3 && Zoom > 0.02){
+void Mouse (int Button, int State, int X, int Y){
+    if (Button == 3 && Zoom > 10.0 && State == GLUT_DOWN){
         Zoom *= 0.95;
         GLint ZoomID = glGetUniformLocation(ProgramReturn(), "zoom");
         glUniform1f(ZoomID, Zoom);
-        cout << Zoom << endl;
         glutPostRedisplay();
     }
 
-    if (button == 4 && Zoom < 0.5){
+    if (Button == 4 && Zoom < 500.0 && State == GLUT_DOWN){
         Zoom *= 1/0.95;
         GLint ZoomID = glGetUniformLocation(ProgramReturn(), "zoom");
         glUniform1f(ZoomID, Zoom);
-        cout << Zoom << endl;
         glutPostRedisplay();
     }
 }

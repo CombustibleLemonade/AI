@@ -38,6 +38,7 @@ GLuint ProgramReturn () {
 }
 
 int init () {
+
     // This bit is Super important!
     glewExperimental = GL_TRUE;
     glewInit();
@@ -56,37 +57,45 @@ int init () {
 
 
     FragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
-    fsCode = FileToString("FragmentShader.fs").c_str();
+    string fsCodeString = FileToString("FragmentShader.fs");
+    fsCode = fsCodeString.c_str();
     glShaderSource(FragmentShaderID, 1, &fsCode, NULL);
+
     glCompileShader(FragmentShaderID);
 
+    VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
+
+    string vsCodeString = FileToString("VertexShader.vs");
+    vsCode = vsCodeString.c_str();
+
+    glShaderSource(VertexShaderID, 1, &vsCode, NULL);
+    glCompileShader(VertexShaderID);
+    glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &CompilevsOk);
+    if (!CompilevsOk) {
+        fprintf(stderr, "Error in vertex shader\n");
+        return 0;
+    }
     glGetShaderiv(FragmentShaderID, GL_COMPILE_STATUS, &CompileOk);
     if (!CompileOk) {
         fprintf(stderr, "Error in fragment shader\n");
         return 0;
     }
 
-    VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-    vsCode = FileToString("VertexShader.vs").c_str();
-    glShaderSource(VertexShaderID, 1, &vsCode, NULL);
-    glCompileShader(VertexShaderID);
-
-    glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &CompilevsOk);
-    if (!CompilevsOk) {
-        fprintf(stderr, "Error in vertex shader\n");
-        return 0;
-    }
 
     Program = glCreateProgram();
     glAttachShader (Program, VertexShaderID);
     glAttachShader (Program, FragmentShaderID);
 
+    glDeleteShader(VertexShaderID);
+    glDeleteShader(FragmentShaderID);
 
     glLinkProgram (Program);
 
-    glDeleteShader(FragmentShaderID);
+
     const char* attribute_name = "coord2d";
     Coord2d = glGetAttribLocation(Program, attribute_name);
+
+
 
     return 1;
 }
