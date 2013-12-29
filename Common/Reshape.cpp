@@ -5,17 +5,11 @@
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 #endif
+#include <iostream>
 
-#include "Display.hpp"
-
-GLint WindowResXID;
-GLint WindowResYID;
+//GLint WindowResXID;
+//GLint WindowResYID;
 
 
 void Reshape(int Width, int Height){
-    WindowResXID = glGetUniformLocation(ProgramReturn(), "xRes");
-    WindowResYID = glGetUniformLocation(ProgramReturn(), "yRes");
-
-    glUniform1i(WindowResXID, Width);
-    glUniform1i(WindowResYID, Height);
 }

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include <vector>
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
@@ -19,13 +20,14 @@ using namespace std;
 int main (int argc, char* argv[]) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
-    glutInitWindowSize(1600, 900);
-    glutCreateWindow("My First Triangle");
+    glutInitWindowSize(1280, 720);
+    glutCreateWindow("AI");
 
     if (init()) {
         glutDisplayFunc(onDisplay);
         glutKeyboardFunc(Keyboard);
         glutMouseFunc(Mouse);
+        glutMotionFunc(Motion);
         glutMainLoop();
     }
     else {
