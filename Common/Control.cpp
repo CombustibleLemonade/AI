@@ -11,6 +11,7 @@
 
 #include "Display.hpp"
 #include "Control.hpp"
+#include "Blocks.hpp"
 
 using namespace std;
 
@@ -32,22 +33,27 @@ void Keyboard (unsigned char Key, int x, int y) {
             Fullscreen = 1;
         }
         else{
-            glutReshapeWindow(1600, 900);
+            glutReshapeWindow(1280, 720);
             Fullscreen = 0;
         }
     }
 }
 
 void Mouse (int Button, int State, int X, int Y){
+    int i;
     if (Button == 4 && Zoom > 10.0 && State == GLUT_DOWN){
         Zoom *= 0.9;
-        GLint ZoomID = glGetUniformLocation(ProgramReturn(), "zoom");
-        glUniform1f(ZoomID, Zoom);
+        i = 0;
+        while (i < ProgramCountReturn()) {
+            GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
+            glUniform1f(ZoomID, Zoom);
+            i++;
+        }
         glutPostRedisplay();
     }
     if (Button == 3 && Zoom < 500.0 && State == GLUT_DOWN){
         Zoom *= 1/0.9;
-        GLint ZoomID = glGetUniformLocation(ProgramReturn(), "zoom");
+        GLint ZoomID = glGetUniformLocation(ProgramReturn(0)->Program, "zoom");
         glUniform1f(ZoomID, Zoom);
         glutPostRedisplay();
     }
@@ -67,11 +73,15 @@ void Mouse (int Button, int State, int X, int Y){
 
 void Motion (int X, int Y) {
     if (Scroll == true){
+        int i = 0;
         NewLocationX += (X - OldLocationX)/Zoom*2;
         NewLocationY -= (Y - OldLocationY)/Zoom*2;
-        LocationID = glGetUniformLocation(ProgramReturn(), "Position");
-        //cout << "X:" << NewLocationX << "  Y: " << NewLocationY << endl;
-        glUniform2f(LocationID, NewLocationX, NewLocationY);
+        while (i < ProgramCountReturn()) {
+            //cout << ProgramReturn(i)->Verts[1] << endl;
+            LocationID = glGetUniformLocation(ProgramReturn(i)->Program, "Position");
+            glUniform2f(LocationID, NewLocationX, NewLocationY);
+            i++;
+        }
         glutPostRedisplay();
         OldLocationX = X;
         OldLocationY = Y;

@@ -39,11 +39,9 @@ include_directories(${CMAKE_SOURCE_DIR}/Common)
 add_executable(plotTwist 
         Main/Main.cpp
         Common/LoadText.cpp
-        Common/LoadText.hpp
         Common/Display.cpp
-        Common/Display.hpp
-	Common/Control.cpp
-        Common/Control.hpp)
+        Common/Control.cpp
+        Common/Blocks.cpp)
 
 ########################################################
 # Linking & stuff

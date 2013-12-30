@@ -14,6 +14,7 @@
 
 #include "Display.hpp"
 #include "LoadText.hpp"
+#include "Blocks.hpp"
 
 using namespace std;
 
@@ -24,20 +25,21 @@ GLint WindowResYID;
 
 GLuint VertexBuffer;
 
+vector<ProgramManager*> Programs;
+int ProgramCount;
+
 void ProgramManager::Init() {
     Program = glCreateProgram();
+    Programs.push_back(this);
+    ProgramCount++;
 }
 
 void ProgramManager::ExtendVerts (float AddVerts[]){
     int i = 0;
-    while (i <= sizeof(AddVerts)){
+    while (i <= (sizeof(AddVerts)-1)){
         Verts.push_back(AddVerts[i]);
         i++;
     }
-
-    //glGenBuffers(1, &VertexBuffer);
-    //glBindBuffer(GL_ARRAY_BUFFER, VertexBuffer);
-    //glBufferData(GL_ARRAY_BUFFER, Verts.size(), Verts.data(), GL_STATIC_DRAW);
 }
 
 void ProgramManager::AddShader(GLenum ShaderType, string (*ShaderStringFunc)()){
@@ -62,10 +64,19 @@ string FragmentShaderFunc () {
     return FileToString("FragmentShader.fs");
 }
 
-ProgramManager Test;
+string FragmentShaderDisplayFunc () {
+    return FileToString("FragmentShaderDisplay.fs");
+}
 
-GLuint ProgramReturn () {
-    return Test.Program;
+ProgramManager Display;
+ProgramManager Halo;
+
+ProgramManager* ProgramReturn (int OffSet) {
+    return Programs[OffSet];
+}
+
+int ProgramCountReturn () {
+    return ProgramCount;
 }
 
 int init () {
@@ -73,44 +84,47 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
-    Test.Init();
+    Display.Init();
+    Halo.Init();
+    float Location[] = {0.0, 0.0};
+    Block TestTwo(Location);
 
-    Test.AddShader(GL_VERTEX_SHADER, VertexShaderFunc);
-    Test.AddShader(GL_FRAGMENT_SHADER, FragmentShaderFunc);
+    Halo.AddShader(GL_VERTEX_SHADER, VertexShaderFunc);
+    Halo.AddShader(GL_FRAGMENT_SHADER, FragmentShaderFunc);
 
-    float VertexBufferData[] = {
-       -1.0f, -1.0f,
-       1.0f, -1.0f,
-       1.0f,  1.0f,
-       -1.0f,  1.0f
-    };
-    Test.ExtendVerts(VertexBufferData);
+    Display.AddShader(GL_VERTEX_SHADER, VertexShaderFunc);
+    Display.AddShader(GL_FRAGMENT_SHADER, FragmentShaderDisplayFunc);
 
-    glLinkProgram (Test.Program);
-
+    glLinkProgram(Display.Program);
+    glLinkProgram(Halo.Program);
     return 1;
 }
 
 void onDisplay () {
     glClearColor(0.2, 0.2, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
-    WindowResXID = glGetUniformLocation(ProgramReturn(), "xRes");
-    WindowResYID = glGetUniformLocation(ProgramReturn(), "yRes");
+    int i = 0;
 
-    glUniform1i(WindowResXID, glutGet(GLUT_WINDOW_WIDTH));
-    glUniform1i(WindowResYID, glutGet(GLUT_WINDOW_HEIGHT));
+    while (i < ProgramCount) {
+        WindowResXID = glGetUniformLocation(ProgramReturn(i)->Program, "xRes");
+        WindowResYID = glGetUniformLocation(ProgramReturn(i)->Program, "yRes");
 
-    glEnableVertexAttribArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, Test.VertexBuffer);
-    glUseProgram(Test.Program);
-    glVertexAttribPointer(
-                0,
-                2,
-                GL_FLOAT,
-                GL_FALSE,
-                0,
-                Test.Verts.data()    );
-    glDrawArrays(GL_QUADS, 0, 4);
-    glDisableVertexAttribArray(0);
+        glUniform1i(WindowResXID, glutGet(GLUT_WINDOW_WIDTH));
+        glUniform1i(WindowResYID, glutGet(GLUT_WINDOW_HEIGHT));
+
+        glEnableVertexAttribArray(0);
+        glBindBuffer(GL_ARRAY_BUFFER, ProgramReturn(i)->VertexBuffer);
+        glUseProgram(ProgramReturn(i)->Program);
+        glVertexAttribPointer(
+                    0,
+                    2,
+                    GL_FLOAT,
+                    GL_FALSE,
+                    0,
+                    ProgramReturn(i)->Verts.data()    );
+        glDrawArrays(GL_QUADS, 0, ProgramReturn(i)->Verts.size()/2);
+        glDisableVertexAttribArray(0);
+        i++;
+    }
     glutSwapBuffers();
 }

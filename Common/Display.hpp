@@ -4,7 +4,6 @@
 class ProgramManager {
     int CompileOk;
 public:
-    int QuadRenderingAmount;
     std::vector<float> Verts;
     void Init();
     GLuint VertexBuffer;
@@ -17,6 +16,8 @@ int init ();
 
 void onDisplay ();
 
-GLuint ProgramReturn ();
+ProgramManager* ProgramReturn (int OffSet);
+
+int ProgramCountReturn ();
 
 #endif
