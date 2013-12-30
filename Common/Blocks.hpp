@@ -11,4 +11,6 @@ public:
     std::vector<float> Cube;
 };
 
+void CreateBlock(float Location[1]);
+
 #endif

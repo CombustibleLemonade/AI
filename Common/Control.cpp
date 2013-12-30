@@ -45,6 +45,7 @@ void Mouse (int Button, int State, int X, int Y){
         Zoom *= 0.9;
         i = 0;
         while (i < ProgramCountReturn()) {
+            glUseProgram(ProgramReturn(i)->Program);
             GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
             glUniform1f(ZoomID, Zoom);
             i++;
@@ -53,8 +54,12 @@ void Mouse (int Button, int State, int X, int Y){
     }
     if (Button == 3 && Zoom < 500.0 && State == GLUT_DOWN){
         Zoom *= 1/0.9;
-        GLint ZoomID = glGetUniformLocation(ProgramReturn(0)->Program, "zoom");
-        glUniform1f(ZoomID, Zoom);
+        while (i < ProgramCountReturn()) {
+            glUseProgram(ProgramReturn(i)->Program);
+            GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
+            glUniform1f(ZoomID, Zoom);
+            i++;
+        }
         glutPostRedisplay();
     }
 
@@ -77,7 +82,7 @@ void Motion (int X, int Y) {
         NewLocationX += (X - OldLocationX)/Zoom*2;
         NewLocationY -= (Y - OldLocationY)/Zoom*2;
         while (i < ProgramCountReturn()) {
-            //cout << ProgramReturn(i)->Verts[1] << endl;
+            glUseProgram(ProgramReturn(i)->Program);
             LocationID = glGetUniformLocation(ProgramReturn(i)->Program, "Position");
             glUniform2f(LocationID, NewLocationX, NewLocationY);
             i++;

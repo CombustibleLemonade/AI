@@ -84,10 +84,14 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
-    Display.Init();
     Halo.Init();
+    Display.Init();
+
     float Location[] = {0.0, 0.0};
-    Block TestTwo(Location);
+    CreateBlock(Location);
+    Location[0] += 3.0;
+    Location[1] +=1.0;
+    CreateBlock(Location);
 
     Halo.AddShader(GL_VERTEX_SHADER, VertexShaderFunc);
     Halo.AddShader(GL_FRAGMENT_SHADER, FragmentShaderFunc);
@@ -95,17 +99,20 @@ int init () {
     Display.AddShader(GL_VERTEX_SHADER, VertexShaderFunc);
     Display.AddShader(GL_FRAGMENT_SHADER, FragmentShaderDisplayFunc);
 
-    glLinkProgram(Display.Program);
     glLinkProgram(Halo.Program);
+    glLinkProgram(Display.Program);
+
     return 1;
 }
 
 void onDisplay () {
     glClearColor(0.2, 0.2, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
-    int i = 0;
 
+    int i = 0;
     while (i < ProgramCount) {
+        glUseProgram(ProgramReturn(i)->Program);
+
         WindowResXID = glGetUniformLocation(ProgramReturn(i)->Program, "xRes");
         WindowResYID = glGetUniformLocation(ProgramReturn(i)->Program, "yRes");
 
@@ -114,7 +121,6 @@ void onDisplay () {
 
         glEnableVertexAttribArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, ProgramReturn(i)->VertexBuffer);
-        glUseProgram(ProgramReturn(i)->Program);
         glVertexAttribPointer(
                     0,
                     2,
@@ -126,5 +132,6 @@ void onDisplay () {
         glDisableVertexAttribArray(0);
         i++;
     }
+
     glutSwapBuffers();
 }
