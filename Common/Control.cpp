@@ -41,7 +41,7 @@ void Keyboard (unsigned char Key, int x, int y) {
 
 void Mouse (int Button, int State, int X, int Y){
     int i;
-    if (Button == 4 && Zoom > 10.0 && State == GLUT_DOWN){
+    if (Button == 4 && Zoom > 0.5 && State == GLUT_DOWN){
         Zoom *= 0.9;
         i = 0;
         while (i < ProgramCountReturn()) {
@@ -93,4 +93,3 @@ void Motion (int X, int Y) {
     }
 
 }
-

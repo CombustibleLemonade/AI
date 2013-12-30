@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 # Project Name
 PROJECT(HW_OPENGL)
 
+
 #Extending the module database
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
@@ -31,7 +32,18 @@ endif(NOT OPENGL_FOUND)
 #########################################################
 find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_PATH})
+#########################################################
+# Find DevIL
+#########################################################
+find_package(DevIL REQUIRED)
+include_directories(${IL_INCLUDE_DIR})
+link_directories(${IL_LIBRARIES})
+link_directories(${ILU_LIBRARIES})
+link_directories(${ILUT_LIBRARIES})
 
+if(IL_FOUND)
+    message(ERROR " DEVIL was found!")
+endif(IL_FOUND)
 #########################################################
 # Include Files
 #########################################################
@@ -52,5 +64,4 @@ add_executable(plotTwist
     ${OPENGL_LIBRARIES}
     ${GLUT_LIBRARY}
     ${GLEW_LIBRARY}
-    ${OPENAL_LIBRARY}
 )

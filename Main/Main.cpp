@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+//#include <IL/devil_cpp_wrapper.hpp>
+
 #ifdef __APPLE__
 #include <GLEW/glew.h>
 #include <GLUT/glut.h>
@@ -22,7 +24,6 @@ int main (int argc, char* argv[]) {
     glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
     glutInitWindowSize(1280, 720);
     glutCreateWindow("AI");
-
     if (init()) {
         glutDisplayFunc(onDisplay);
         glutKeyboardFunc(Keyboard);

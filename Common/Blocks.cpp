@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <FreeImage.h>
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
@@ -16,7 +17,7 @@ using namespace std;
 
 vector<Block*> AllBlocks;
 
-Block::Block (float LocationArg[1]) {
+Block::Block (float LocationArg[1], const char* ImageFileName) {
     AllBlocks.push_back(this);
 
     Location[0] = LocationArg[0];
@@ -26,17 +27,25 @@ Block::Block (float LocationArg[1]) {
         1.1f + Location[0], -1.1f + Location[1],
         1.1f + Location[0],  1.1f + Location[1],
         -1.1f + Location[0],  1.1f + Location[1]
-     };
+    };
     ProgramReturn(0)->ExtendVerts(HaloCubeContents);
     float CubeContents[] = {
         -1.0f + Location[0], -1.0f + Location[1],
         1.0f + Location[0], -1.0f + Location[1],
         1.0f + Location[0],  1.0f + Location[1],
         -1.0f + Location[0],  1.0f + Location[1]
-         };
+    };
     ProgramReturn(1)->ExtendVerts(CubeContents);
+    float CubeUVs[] = {
+        0.0f,  0.0f,
+        1.0f,  0.0f,
+        1.0f,  1.0f,
+        0.0f,  1.0f
+    };
+    ProgramReturn(1)->ExtendUVs(CubeUVs);
+
 }
 
 void CreateBlock(float Location[1]) {
-    AllBlocks.push_back(new Block (Location));
+    AllBlocks.push_back(new Block (Location, ""));
 }
