@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+#include <il.h>
 //#include <IL/devil_cpp_wrapper.hpp>
 
 #ifdef __APPLE__
@@ -21,6 +22,7 @@ using namespace std;
 
 int main (int argc, char* argv[]) {
     glutInit(&argc, argv);
+    //ilInit();
     glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
     glutInitWindowSize(1280, 720);
     glutCreateWindow("AI");
