@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 
-#include <il.h>
-//#include <IL/devil_cpp_wrapper.hpp>
-
 #ifdef __APPLE__
 #include <GLEW/glew.h>
 #include <GLUT/glut.h>
@@ -15,6 +12,10 @@
 #include <GL/freeglut.h>
 #endif
 
+#define ILUT_USE_OPENGL
+#include <IL/il.h>
+#include <IL/ilut.h>
+
 #include "Display.hpp"
 #include "Control.hpp"
 
@@ -22,7 +23,11 @@ using namespace std;
 
 int main (int argc, char* argv[]) {
     glutInit(&argc, argv);
-    //ilInit();
+    glewInit();
+    ilInit();
+    ilutInit();
+    ilutRenderer(ILUT_OPENGL_CONV);
+
     glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
     glutInitWindowSize(1280, 720);
     glutCreateWindow("AI");

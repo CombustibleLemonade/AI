@@ -3,7 +3,8 @@
 
 class Block {
 public:
-    Block(float LocationArg[1], const char* ImageFileName);
+    GLuint Texture;
+    Block(float LocationArg[1], char* ImageFileName);
     std::vector<Block*> Next;
     std::vector<Block*> Previous;
     float Location[1];
@@ -12,6 +13,7 @@ public:
     char* ImageName;
 };
 
-void CreateBlock(float Location[1]);
+void CreateBlock(float Location[1], char* ImageFileName);
 
+GLuint ReturnTexture(int OffSet);
 #endif

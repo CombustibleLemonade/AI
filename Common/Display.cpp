@@ -6,6 +6,10 @@
 #include <GL/freeglut.h>
 #endif
 
+#define ILUT_USE_OPENGL
+#include <IL/il.h>
+#include <IL/ilut.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -17,8 +21,6 @@
 #include "Blocks.hpp"
 
 using namespace std;
-
-GLint Coord2d;
 
 GLint WindowResXID;
 GLint WindowResYID;
@@ -32,8 +34,6 @@ int ProgramCount;
 
 void ProgramManager::Init() {
     Program = glCreateProgram();
-    Programs.push_back(this);
-    ProgramCount++;
 }
 
 void ProgramManager::ExtendVerts (float AddVerts[]){
@@ -66,24 +66,11 @@ void ProgramManager::AddShader(GLenum ShaderType, string (*ShaderStringFunc)()){
     }
 }
 
-string HaloVertexShader () {
-    return FileToString("VertexShader.vs");
+ProgramManager* AddProgram() {
+    Programs.push_back(new ProgramManager);
+    ProgramCount++;
+    return Programs.back();
 }
-
-string HaloFragmentShader () {
-    return FileToString("FragmentShader.fs");
-}
-
-string DisplayVertexShader () {
-    return FileToString("Display.vs");
-}
-
-string DisplayFragmentShader () {
-    return FileToString("Display.fs");
-}
-
-ProgramManager Display;
-ProgramManager Halo;
 
 ProgramManager* ProgramReturn (int OffSet) {
     return Programs[OffSet];
@@ -98,30 +85,23 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
-    Halo.Init();
-    Display.Init();
-
     float Location[] = {0.0, 0.0};
-    CreateBlock(Location);
+
+    CreateBlock(Location, "Plus.png");
     Location[0] += 3.0;
-    CreateBlock(Location);
+    CreateBlock(Location, "Minus.png");
 
-    Halo.AddShader(GL_VERTEX_SHADER, HaloVertexShader);
-    Halo.AddShader(GL_FRAGMENT_SHADER, HaloFragmentShader);
+    glActiveTexture(GL_TEXTURE0);
 
-    Display.AddShader(GL_VERTEX_SHADER, DisplayVertexShader);
-    Display.AddShader(GL_FRAGMENT_SHADER, DisplayFragmentShader);
-
-    glLinkProgram(Halo.Program);
-    glLinkProgram(Display.Program);
     int i = 0;
     while (i < ProgramCountReturn()) {
         GLint TempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "coord2d");
         Attributes.push_back(TempAttribute);
-        GLint SecondTempAttribute = glGetAttribLocation(ProgramReturn(1)->Program, "UVcoord");
+        GLint SecondTempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "UVcoord");
         UvAttributes.push_back(SecondTempAttribute);
         i++;
     }
+
     return 1;
 }
 
@@ -132,6 +112,11 @@ void onDisplay () {
     int i = 0;
     while (i < ProgramCount) {
         glUseProgram(ProgramReturn(i)->Program);
+
+        glBindTexture(GL_TEXTURE_2D, ProgramReturn(i)->Texture);
+
+        GLuint TextureID = glGetUniformLocation(ProgramReturn(i)->Program, "textureSampler");
+        glUniform1i(TextureID, 0);
 
         WindowResXID = glGetUniformLocation(ProgramReturn(i)->Program, "xRes");
         WindowResYID = glGetUniformLocation(ProgramReturn(i)->Program, "yRes");
@@ -156,15 +141,13 @@ void onDisplay () {
                     GL_FLOAT,
                     GL_FALSE,
                     0,
-                    ProgramReturn(1)->UVs.data()    );
+                    ProgramReturn(i)->UVs.data()    );
         glDrawArrays(GL_QUADS, 0, ProgramReturn(i)->Verts.size()/2);
         glDisableVertexAttribArray(Attributes[i]);
         glDisableVertexAttribArray(UvAttributes[i]);
 
         i++;
     }
-
-
 
     glutSwapBuffers();
 }

@@ -5,6 +5,7 @@ class ProgramManager {
     int CompileOk;
 public:
     void Init();
+    GLuint Texture;
     std::vector<float> UVs;
     std::vector<float> Verts;
     GLuint VertexBuffer;
@@ -17,6 +18,8 @@ public:
 int init ();
 
 void onDisplay ();
+
+ProgramManager* AddProgram();
 
 ProgramManager* ProgramReturn (int OffSet);
 
