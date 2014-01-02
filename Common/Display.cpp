@@ -31,6 +31,7 @@ vector<GLuint> UvAttributes;
 
 vector<ProgramManager*> Programs;
 int ProgramCount;
+ProgramManager Knob;
 
 void ProgramManager::Init() {
     Program = glCreateProgram();
@@ -76,6 +77,10 @@ ProgramManager* ProgramReturn (int OffSet) {
     return Programs[OffSet];
 }
 
+ProgramManager* KnobReturn (int OffSet) {
+    return &Knob;
+}
+
 int ProgramCountReturn () {
     return ProgramCount;
 }
@@ -85,11 +90,19 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
+
+    Knob.Texture = ilutGLLoadImage("Knob.png");
     float Location[] = {0.0, 0.0};
+
+    glAlphaFunc(GL_GREATER, 0.1);
+    glEnable(GL_ALPHA_TEST);
+    int j = 0;
+    int k = 0;
 
     CreateBlock(Location, "Plus.png");
     Location[0] += 3.0;
     CreateBlock(Location, "Minus.png");
+
 
     glActiveTexture(GL_TEXTURE0);
 
@@ -148,6 +161,7 @@ void onDisplay () {
 
         i++;
     }
+
 
     glutSwapBuffers();
 }
