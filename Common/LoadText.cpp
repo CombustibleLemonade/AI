@@ -28,7 +28,7 @@ string FileToString (const char* Shader) {
         ShaderStream.close();
 
     }else{
-        printf("Impossible to open. Are you in the right directory ? Don't forget to read the FAQ !\n");
+        printf("Impossible to open. Are you in the right directory?\n");
         return 0;
     }
     return ShaderCode;

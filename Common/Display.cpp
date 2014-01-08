@@ -28,6 +28,8 @@ GLint WindowResYID;
 GLuint VertexBuffer;
 vector<GLuint> Attributes;
 vector<GLuint> UvAttributes;
+GLuint KnobAttribute;
+GLuint UVKnobAttribute;
 
 vector<ProgramManager*> Programs;
 int ProgramCount;
@@ -67,6 +69,21 @@ void ProgramManager::AddShader(GLenum ShaderType, string (*ShaderStringFunc)()){
     }
 }
 
+void ProgramManager::AddShader(GLenum ShaderType, char* FileName) {
+    GLuint ShaderID = glCreateShader(ShaderType);
+    string ShaderCodeString = FileToString(FileName);
+    const char* ShaderCode = ShaderCodeString.c_str();
+    glShaderSource(ShaderID, 1, &ShaderCode, NULL);
+    glCompileShader(ShaderID);
+    glAttachShader(Program, ShaderID);
+    glGetShaderiv(ShaderID, GL_COMPILE_STATUS, &CompileOk);
+    if (!CompileOk) {
+        cout << "Shader Error: " << ShaderType << endl;
+        return;
+    }
+}
+
+
 ProgramManager* AddProgram() {
     Programs.push_back(new ProgramManager);
     ProgramCount++;
@@ -77,12 +94,53 @@ ProgramManager* ProgramReturn (int OffSet) {
     return Programs[OffSet];
 }
 
-ProgramManager* KnobReturn (int OffSet) {
+ProgramManager* KnobReturn () {
     return &Knob;
 }
 
+
 int ProgramCountReturn () {
     return ProgramCount;
+}
+
+void DisplayFunc (ProgramManager* ActiveProgram, int i) {
+    glUseProgram(ActiveProgram->Program);
+
+    glBindTexture(GL_TEXTURE_2D, ActiveProgram->Texture);
+    GLuint TextureID = glGetUniformLocation(ActiveProgram->Program, "textureSampler");
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glUniform1i(TextureID, 0);
+
+    WindowResXID = glGetUniformLocation(ActiveProgram->Program, "xRes");
+    WindowResYID = glGetUniformLocation(ActiveProgram->Program, "yRes");
+    glUniform1i(WindowResXID, glutGet(GLUT_WINDOW_WIDTH));
+    glUniform1i(WindowResYID, glutGet(GLUT_WINDOW_HEIGHT));
+
+    glEnableVertexAttribArray(Attributes[i]);
+    glEnableVertexAttribArray(UvAttributes[i]);
+
+    glVertexAttribPointer(
+                0,
+                2,
+                GL_FLOAT,
+                GL_FALSE,
+                0,
+                ActiveProgram->Verts.data()    );
+
+    glVertexAttribPointer(
+                UvAttributes[i],
+                2,
+                GL_FLOAT,
+                GL_FALSE,
+                0,
+                ActiveProgram->UVs.data()    );
+    glDrawArrays(GL_QUADS, 0, ActiveProgram->Verts.size()/2);
+    glDisableVertexAttribArray(Attributes[i]);
+    glDisableVertexAttribArray(UvAttributes[i]);
 }
 
 int init () {
@@ -90,19 +148,24 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
-
+    Knob.Init();
     Knob.Texture = ilutGLLoadImage("Knob.png");
+    Knob.AddShader(GL_VERTEX_SHADER, "Display.vs");
+    Knob.AddShader(GL_FRAGMENT_SHADER, "Display.fs");
+    glLinkProgram(Knob.Program);
+
     float Location[] = {0.0, 0.0};
 
-    glAlphaFunc(GL_GREATER, 0.1);
-    glEnable(GL_ALPHA_TEST);
+    //glAlphaFunc(GL_GREATER, 0.1);
+    //glEnable(GL_ALPHA_TEST);
     int j = 0;
     int k = 0;
 
     CreateBlock(Location, "Plus.png");
     Location[0] += 3.0;
     CreateBlock(Location, "Minus.png");
-
+    BlockReturn(1)->AddNextBlock(BlockReturn(1));
+    BlockReturn(2)->AddPreviousBlock(BlockReturn(0));
 
     glActiveTexture(GL_TEXTURE0);
 
@@ -110,58 +173,26 @@ int init () {
     while (i < ProgramCountReturn()) {
         GLint TempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "coord2d");
         Attributes.push_back(TempAttribute);
-        GLint SecondTempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "UVcoord");
-        UvAttributes.push_back(SecondTempAttribute);
+        GLint UVTempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "UVcoord");
+        UvAttributes.push_back(UVTempAttribute);
         i++;
     }
+    KnobAttribute = glGetAttribLocation(Knob.Program, "coord2d");
 
     return 1;
 }
 
 void onDisplay () {
-    glClearColor(0.2, 0.2, 0.2, 1.0);
+    glClearColor(0.2, 0.2, 0.3, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
     int i = 0;
     while (i < ProgramCount) {
-        glUseProgram(ProgramReturn(i)->Program);
-
-        glBindTexture(GL_TEXTURE_2D, ProgramReturn(i)->Texture);
-
-        GLuint TextureID = glGetUniformLocation(ProgramReturn(i)->Program, "textureSampler");
-        glUniform1i(TextureID, 0);
-
-        WindowResXID = glGetUniformLocation(ProgramReturn(i)->Program, "xRes");
-        WindowResYID = glGetUniformLocation(ProgramReturn(i)->Program, "yRes");
-
-        glUniform1i(WindowResXID, glutGet(GLUT_WINDOW_WIDTH));
-        glUniform1i(WindowResYID, glutGet(GLUT_WINDOW_HEIGHT));
-
-        glEnableVertexAttribArray(Attributes[i]);
-        glEnableVertexAttribArray(UvAttributes[i]);
-
-        glVertexAttribPointer(
-                    0,
-                    2,
-                    GL_FLOAT,
-                    GL_FALSE,
-                    0,
-                    ProgramReturn(i)->Verts.data()    );
-
-        glVertexAttribPointer(
-                    UvAttributes[i],
-                    2,
-                    GL_FLOAT,
-                    GL_FALSE,
-                    0,
-                    ProgramReturn(i)->UVs.data()    );
-        glDrawArrays(GL_QUADS, 0, ProgramReturn(i)->Verts.size()/2);
-        glDisableVertexAttribArray(Attributes[i]);
-        glDisableVertexAttribArray(UvAttributes[i]);
-
+        DisplayFunc(ProgramReturn(i), i);
         i++;
     }
-
+    //glBindTexture(GL_TEXTURE_2D, Knob.Texture);
+    DisplayFunc(&Knob, 0);
 
     glutSwapBuffers();
 }

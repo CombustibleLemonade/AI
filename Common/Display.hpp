@@ -11,18 +11,19 @@ public:
     GLuint VertexBuffer;
     GLint Program;
     void AddShader(GLenum ShaderType, std::string (*ShaderStringFunc)());
+    void AddShader(GLenum ShaderType, char* FileName);
     void ExtendVerts (float AddVerts[]);
     void ExtendUVs (float AddUVs[]);
 };
 
+class KnobManager {
+};
+
 int init ();
-
 void onDisplay ();
-
 ProgramManager* AddProgram();
-
 ProgramManager* ProgramReturn (int OffSet);
-
+ProgramManager* KnobReturn();
 int ProgramCountReturn ();
 
 #endif

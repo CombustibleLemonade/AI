@@ -16,7 +16,7 @@
 using namespace std;
 
 int Fullscreen = 0;
-float Zoom = 500;
+float Zoom = 200;
 
 int OldLocationX = 0;
 int OldLocationY = 0;
@@ -41,8 +41,10 @@ void Keyboard (unsigned char Key, int x, int y) {
 
 void Mouse (int Button, int State, int X, int Y){
     int i;
-    if (Button == 4 && Zoom > 0.5 && State == GLUT_DOWN){
+    if (Button == 4 && Zoom > 5.0 && State == GLUT_DOWN){
         Zoom *= 0.9;
+        GLint ZoomID = glGetUniformLocation(KnobReturn()->Program, "zoom");
+        glUniform1f(ZoomID, Zoom);
         i = 0;
         while (i < ProgramCountReturn()) {
             glUseProgram(ProgramReturn(i)->Program);
@@ -54,6 +56,9 @@ void Mouse (int Button, int State, int X, int Y){
     }
     if (Button == 3 && Zoom < 500.0 && State == GLUT_DOWN){
         Zoom *= 1/0.9;
+        GLint ZoomID = glGetUniformLocation(KnobReturn()->Program, "zoom");
+        glUniform1f(ZoomID, Zoom);
+        i = 0;
         while (i < ProgramCountReturn()) {
             glUseProgram(ProgramReturn(i)->Program);
             GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
@@ -87,6 +92,9 @@ void Motion (int X, int Y) {
             glUniform2f(LocationID, NewLocationX, NewLocationY);
             i++;
         }
+        glUseProgram(KnobReturn()->Program);
+        LocationID = glGetUniformLocation(KnobReturn()->Program, "Position");
+        glUniform2f(LocationID, NewLocationX, NewLocationY);
         glutPostRedisplay();
         OldLocationX = X;
         OldLocationY = Y;
