@@ -43,7 +43,7 @@ Block::Block (float LocationArg[1], char* ImageFileName) {
     ThisProgram->Init();
     ThisProgram->AddShader(GL_VERTEX_SHADER, VertexShader);
     ThisProgram->AddShader(GL_FRAGMENT_SHADER, FragmentShader);
-    glLinkProgram(ThisProgram->Program);
+    ThisProgram->LinkProgram();
 
 
     Location[0] = LocationArg[0];
@@ -85,6 +85,8 @@ void CreateBlock(float Location[1], char* ImageFileName) {
 BlockPointer::BlockPointer(float LocationArg[1], bool Next) {
     Location[0] = LocationArg[0];
     Location[1] = LocationArg[1];
+    FirstVertex = sizeof(KnobReturn()->Verts) + 1;
+    IsNext = Next;
     if (Next) {
         float Knob[] = {
             -0.1f + Location[0], -0.1f + Location[1],
@@ -102,14 +104,22 @@ BlockPointer::BlockPointer(float LocationArg[1], bool Next) {
         };
         KnobReturn()->ExtendVerts(Knob);
     }
-
+    int i = 0;
 }
 
 Block* BlockReturn (int i) {
-    cout << AllBlocks[i] << " " << i << endl;
     return AllBlocks[i];
 }
 
 GLuint ReturnTexture(int OffSet) {
     return Textures[OffSet];
+}
+
+Connector::Connector(BlockPointer* PreviousArg, BlockPointer* NextArg) {
+}
+
+void ConnectBlocks(Block* Previous, Block* Next){
+    Previous->AddNextBlock(BlockReturn(1));
+    Next->AddPreviousBlock(BlockReturn(0));
+
 }

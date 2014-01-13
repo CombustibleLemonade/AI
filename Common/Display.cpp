@@ -26,14 +26,12 @@ GLint WindowResXID;
 GLint WindowResYID;
 
 GLuint VertexBuffer;
-vector<GLuint> Attributes;
-vector<GLuint> UvAttributes;
-GLuint KnobAttribute;
-GLuint UVKnobAttribute;
+
 
 vector<ProgramManager*> Programs;
 int ProgramCount;
 ProgramManager Knob;
+ProgramManager Curve;
 
 void ProgramManager::Init() {
     Program = glCreateProgram();
@@ -83,6 +81,13 @@ void ProgramManager::AddShader(GLenum ShaderType, char* FileName) {
     }
 }
 
+void ProgramManager::LinkProgram() {
+    glLinkProgram(Program);
+    GLint TempAttribute = glGetAttribLocation(Program, "coord2d");
+    Attribute = TempAttribute;
+    GLint UVTempAttribute = glGetAttribLocation(Program, "UVcoord");
+    UVAttribute = UVTempAttribute;
+}
 
 ProgramManager* AddProgram() {
     Programs.push_back(new ProgramManager);
@@ -120,8 +125,8 @@ void DisplayFunc (ProgramManager* ActiveProgram, int i) {
     glUniform1i(WindowResXID, glutGet(GLUT_WINDOW_WIDTH));
     glUniform1i(WindowResYID, glutGet(GLUT_WINDOW_HEIGHT));
 
-    glEnableVertexAttribArray(Attributes[i]);
-    glEnableVertexAttribArray(UvAttributes[i]);
+    glEnableVertexAttribArray(ActiveProgram->Attribute);
+    glEnableVertexAttribArray(ActiveProgram->UVAttribute);
 
     glVertexAttribPointer(
                 0,
@@ -132,15 +137,15 @@ void DisplayFunc (ProgramManager* ActiveProgram, int i) {
                 ActiveProgram->Verts.data()    );
 
     glVertexAttribPointer(
-                UvAttributes[i],
+                ActiveProgram->UVAttribute,
                 2,
                 GL_FLOAT,
                 GL_FALSE,
                 0,
                 ActiveProgram->UVs.data()    );
     glDrawArrays(GL_QUADS, 0, ActiveProgram->Verts.size()/2);
-    glDisableVertexAttribArray(Attributes[i]);
-    glDisableVertexAttribArray(UvAttributes[i]);
+    glDisableVertexAttribArray(ActiveProgram->Attribute);
+    glDisableVertexAttribArray(ActiveProgram->UVAttribute);
 }
 
 int init () {
@@ -148,36 +153,34 @@ int init () {
     glewExperimental = GL_TRUE;
     glewInit();
 
+    Curve.Init();
+    Curve.Texture = ilutGLLoadImage("Curve.png");
+    Curve.AddShader(GL_VERTEX_SHADER, "Display.vs");
+    Curve.AddShader(GL_FRAGMENT_SHADER, "Display.fs");
+    Curve.LinkProgram();
+    float Test[] = {
+        -1.0f, -1.0f,
+        1.0f, -1.0f,
+        1.0f,  1.0f,
+        -1.0f,  1.0f
+    };
+    Curve.ExtendVerts(Test);
+    Curve.ExtendUVs(Test);
+
     Knob.Init();
     Knob.Texture = ilutGLLoadImage("Knob.png");
     Knob.AddShader(GL_VERTEX_SHADER, "Display.vs");
     Knob.AddShader(GL_FRAGMENT_SHADER, "Display.fs");
-    glLinkProgram(Knob.Program);
+    Knob.LinkProgram();
 
     float Location[] = {0.0, 0.0};
-
-    //glAlphaFunc(GL_GREATER, 0.1);
-    //glEnable(GL_ALPHA_TEST);
-    int j = 0;
-    int k = 0;
 
     CreateBlock(Location, "Plus.png");
     Location[0] += 3.0;
     CreateBlock(Location, "Minus.png");
-    BlockReturn(1)->AddNextBlock(BlockReturn(1));
-    BlockReturn(2)->AddPreviousBlock(BlockReturn(0));
+    ConnectBlocks(BlockReturn(1), BlockReturn(2));
 
     glActiveTexture(GL_TEXTURE0);
-
-    int i = 0;
-    while (i < ProgramCountReturn()) {
-        GLint TempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "coord2d");
-        Attributes.push_back(TempAttribute);
-        GLint UVTempAttribute = glGetAttribLocation(ProgramReturn(i)->Program, "UVcoord");
-        UvAttributes.push_back(UVTempAttribute);
-        i++;
-    }
-    KnobAttribute = glGetAttribLocation(Knob.Program, "coord2d");
 
     return 1;
 }
@@ -193,6 +196,7 @@ void onDisplay () {
     }
     //glBindTexture(GL_TEXTURE_2D, Knob.Texture);
     DisplayFunc(&Knob, 0);
+    //DisplayFunc(&Curve, 1);
 
     glutSwapBuffers();
 }

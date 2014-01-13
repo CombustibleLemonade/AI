@@ -20,13 +20,22 @@ public:
 
 class BlockPointer{
 public:
+    float FirstVertex;
     float Location[1];
     void Move(int YLocation);
+    void Move(int YLocation, int XLoaction);
     bool IsNext;
     Block* NextBlock;
     BlockPointer(float LocationArg[1], bool Next);
 };
 
+class Connector {
+    Connector(BlockPointer* PreviousArg, BlockPointer* NextArg);
+    BlockPointer* Previous;
+    BlockPointer* Next;
+};
+
+void ConnectBlocks(Block* Previous, Block* Next);
 void CreateBlock(float Location[1], char* ImageFileName);
 void AddNextBlock ();
 Block* BlockReturn (int i);
