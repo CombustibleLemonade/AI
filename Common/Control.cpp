@@ -10,8 +10,8 @@
 #endif
 
 #include "Display.hpp"
-#include "Control.hpp"
 #include "Blocks.hpp"
+#include "Control.hpp"
 
 using namespace std;
 
@@ -23,11 +23,11 @@ int OldLocationY = 0;
 float NewLocationX = 0;
 float NewLocationY = 0;
 GLint LocationID;
-
+Block* CollidingBlock;
 int Scroll = false;
 
 void Keyboard (unsigned char Key, int x, int y) {
-    if (Key == 27) {
+    /*if (Key == 27) {
         if (!Fullscreen){
             glutFullScreen();
             Fullscreen = 1;
@@ -36,38 +36,19 @@ void Keyboard (unsigned char Key, int x, int y) {
             glutReshapeWindow(1280, 720);
             Fullscreen = 0;
         }
-    }
+    }*/
 }
 
 void Mouse (int Button, int State, int X, int Y){
     int i;
     if (Button == 4 && Zoom > 5.0 && State == GLUT_DOWN){
         Zoom *= 0.9;
-        GLint ZoomID = glGetUniformLocation(KnobReturn()->Program, "zoom");
-        glUniform1f(ZoomID, Zoom);
-        i = 0;
-        while (i < ProgramCountReturn()) {
-            glUseProgram(ProgramReturn(i)->Program);
-            GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
-            glUniform1f(ZoomID, Zoom);
-            i++;
-        }
-        glutPostRedisplay();
+        SetCameraZoom(Zoom);
     }
     if (Button == 3 && Zoom < 500.0 && State == GLUT_DOWN){
         Zoom *= 1/0.9;
-        GLint ZoomID = glGetUniformLocation(KnobReturn()->Program, "zoom");
-        glUniform1f(ZoomID, Zoom);
-        i = 0;
-        while (i < ProgramCountReturn()) {
-            glUseProgram(ProgramReturn(i)->Program);
-            GLint ZoomID = glGetUniformLocation(ProgramReturn(i)->Program, "zoom");
-            glUniform1f(ZoomID, Zoom);
-            i++;
-        }
-        glutPostRedisplay();
+        SetCameraZoom(Zoom);
     }
-
     if (Button ==1){
         OldLocationX = X;
         OldLocationY = Y;
@@ -79,6 +60,10 @@ void Mouse (int Button, int State, int X, int Y){
             glutSetCursor(GLUT_CURSOR_RIGHT_ARROW);
         }
     }
+    cout << Button << endl;
+    if (Button == 0 && CollidingBlock){
+        CollidingBlock->ThisProgram->TargetFullscreen = 1.0;
+    }
 }
 
 void Motion (int X, int Y) {
@@ -86,18 +71,27 @@ void Motion (int X, int Y) {
         int i = 0;
         NewLocationX += (X - OldLocationX)/Zoom*2;
         NewLocationY -= (Y - OldLocationY)/Zoom*2;
-        while (i < ProgramCountReturn()) {
-            glUseProgram(ProgramReturn(i)->Program);
-            LocationID = glGetUniformLocation(ProgramReturn(i)->Program, "Position");
-            glUniform2f(LocationID, NewLocationX, NewLocationY);
-            i++;
-        }
-        glUseProgram(KnobReturn()->Program);
-        LocationID = glGetUniformLocation(KnobReturn()->Program, "Position");
-        glUniform2f(LocationID, NewLocationX, NewLocationY);
-        glutPostRedisplay();
+
+        SetCameraPosition(NewLocationX, NewLocationY);
+
         OldLocationX = X;
         OldLocationY = Y;
     }
+}
 
+void PassiveMotion(int X, int Y){
+    int XBlockArrayPos;
+    int YBlockArrayPos;
+
+    int ScreenXRes = glutGet(GLUT_WINDOW_WIDTH);
+    int ScreenYRes = glutGet(GLUT_WINDOW_HEIGHT);
+    float RealXPosition = ((X-ScreenXRes/2)/Zoom*2)-NewLocationX;
+    float RealYPosition = -((Y-ScreenYRes/2)/Zoom*2)-NewLocationY;
+
+    CollidingBlock = CheckBlockCollision(RealXPosition, RealYPosition);
+    if (CollidingBlock){
+        glutSetCursor(GLUT_CURSOR_INFO);
+    } else {
+        glutSetCursor(GLUT_CURSOR_RIGHT_ARROW);
+    }
 }

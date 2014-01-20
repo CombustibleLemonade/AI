@@ -19,8 +19,6 @@
 
 using namespace std;
 
-ProgramManager* ThisProgram;
-
 GLuint TextureID;
 vector<Block*> AllBlocks;
 vector<GLuint> Textures;
@@ -38,7 +36,7 @@ Block::Block (float LocationArg[1], char* ImageFileName) {
 
     this->Location[0] = LocationArg[0];
     this->Location[1] = LocationArg[1];
-    ThisProgram = AddProgram();
+    ThisProgram = AddProgram(1);
 
     ThisProgram->Init();
     ThisProgram->AddShader(GL_VERTEX_SHADER, VertexShader);
@@ -64,47 +62,26 @@ Block::Block (float LocationArg[1], char* ImageFileName) {
         0.0f,  1.0f
     };
     ThisProgram->ExtendUVs(CubeUVs);
-    KnobReturn()->ExtendUVs(CubeUVs);
     ThisProgram->Texture = ilutGLLoadImage(ImageFileName);
 }
 
 void Block::AddNextBlock (Block* NextBlock) {
     float Location[2] = {1.0 + this->Location[0], 0.0 + this->Location[1]};
-    BlockPointer Knob(Location, true);
 }
 
 void Block::AddPreviousBlock (Block* PreviousBlock) {
     float Location[2] = {-1.0 + this->Location[0], 0.0 + this->Location[1]};
-    BlockPointer Knob(Location, false);
+}
+
+bool Block::CheckCollision (float X, float Y) {
+    if (X<(Location[0]+1.0) && X>(Location[0]-1.0) && Y<(Location[1]+1.0) && Y>(Location[1]-1.0)){
+        return true;
+    }
+    return false;
 }
 
 void CreateBlock(float Location[1], char* ImageFileName) {
     AllBlocks.push_back(new Block (Location, ImageFileName));
-}
-
-BlockPointer::BlockPointer(float LocationArg[1], bool Next) {
-    Location[0] = LocationArg[0];
-    Location[1] = LocationArg[1];
-    FirstVertex = sizeof(KnobReturn()->Verts) + 1;
-    IsNext = Next;
-    if (Next) {
-        float Knob[] = {
-            -0.1f + Location[0], -0.1f + Location[1],
-            0.1f + Location[0], -0.1f + Location[1],
-            0.1f + Location[0],  0.1f + Location[1],
-            -0.1f + Location[0],  0.1f + Location[1]
-        };
-        KnobReturn()->ExtendVerts(Knob);
-    } else {
-        float Knob[] = {
-            0.1f + Location[0], -0.1f + Location[1],
-            -0.1f + Location[0], -0.1f + Location[1],
-            -0.1f + Location[0],  0.1f + Location[1],
-            0.1f + Location[0],  0.1f + Location[1]
-        };
-        KnobReturn()->ExtendVerts(Knob);
-    }
-    int i = 0;
 }
 
 Block* BlockReturn (int i) {
@@ -115,11 +92,29 @@ GLuint ReturnTexture(int OffSet) {
     return Textures[OffSet];
 }
 
-Connector::Connector(BlockPointer* PreviousArg, BlockPointer* NextArg) {
+Connector::Connector(Block* PreviousArg, Block* NextArg, int VertID) {
+    PreviousArg->AddNextBlock(NextArg);
+    NextArg->AddPreviousBlock(PreviousArg);
+    Previous = PreviousArg;
+    Next = NextArg;
+    VertexVectorID = VertID;
 }
 
 void ConnectBlocks(Block* Previous, Block* Next){
     Previous->AddNextBlock(BlockReturn(1));
     Next->AddPreviousBlock(BlockReturn(0));
-
 }
+
+Block* CheckBlockCollision(float X, float Y){
+    int AmountOfBlocks = AllBlocks.size();
+    int i = 0;
+    while (i < AmountOfBlocks) {
+        if(AllBlocks[i]->CheckCollision(X, Y))
+            //AllBlocks[i]->ThisProgram->TargetFullscreen = 1.0;
+            //cout << AllBlocks[i]->ThisProgram->TargetFullscreen << endl;
+            return AllBlocks[i];
+        i++;
+    }
+}
+
+
