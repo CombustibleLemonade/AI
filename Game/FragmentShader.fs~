@@ -1,7 +1,0 @@
-#version 330 core
-
-uniform sampler2D textureSampler;
-
-void main(void) {
-	gl_FragColor = vec4(asdf, 0.0);
-}
