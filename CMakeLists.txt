@@ -46,7 +46,7 @@ link_directories(${ILUT_LIBRARIES})
 # Include Files
 #########################################################
 include_directories(${CMAKE_SOURCE_DIR}/Common)
-add_executable(plotTwist 
+add_executable(plotTwist
         Main/Main.cpp
         Common/LoadText.cpp
         Common/Display.cpp

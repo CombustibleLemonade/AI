@@ -26,10 +26,8 @@ string FileToString (const char* Shader) {
             ShaderCode += "\n" + Line;
         }
         ShaderStream.close();
-
+        return ShaderCode;
     }else{
         printf("Impossible to open. Are you in the right directory?\n");
-        return 0;
     }
-    return ShaderCode;
 }

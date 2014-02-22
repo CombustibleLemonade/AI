@@ -16,32 +16,8 @@
 #include <IL/il.h>
 #include <IL/ilut.h>
 
+#include "LoadText.hpp"
 #include "Display.hpp"
 #include "Control.hpp"
 
 using namespace std;
-
-int main (int argc, char* argv[]) {
-    glutInit(&argc, argv);
-    glewInit();
-    ilInit();
-    ilutInit();
-    ilutRenderer(ILUT_OPENGL_CONV);
-
-    glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
-    glutInitWindowSize(1280, 720);
-    glutCreateWindow("AI");
-    if (init()) {
-        glutDisplayFunc(onDisplay);
-        glutKeyboardFunc(Keyboard);
-        glutMouseFunc(Mouse);
-        glutMotionFunc(Motion);
-        glutPassiveMotionFunc(PassiveMotion);
-        glutIdleFunc(Idle);
-        glutFullScreen();
-        glutMainLoop();
-    }
-    else {
-        return 0;
-    }
-}
