@@ -59,7 +59,7 @@ Uniform1i::Uniform1i (GLuint UniformLocation) {
 Vector2::Vector2() {
     x = 0.0;
     y = 0.0;
-    Vector2 operator + (const Vector2);
+    //Vector2 operator + (const Vector2);
 };
 
 Vector2::Vector2(float xArg, float yArg) : x(xArg), y(yArg) {}
@@ -69,6 +69,13 @@ Vector2 Vector2::operator + (const Vector2& Param) {
     Temp.x = x + Param.x;
     Temp.y = y + Param.y;
     return Temp;
+}
+
+void Vector2::operator +=(const Vector2& Param) {
+    Vector2 Temp;
+    x += Param.x;
+    y += Param.y;
+    return;
 }
 
 Texture::Texture(char *FileName, const char *VariableName) {
@@ -112,6 +119,11 @@ Model2d::Model2d(GLenum RelativeSpace) {
 void Model2d::Translate(float x, float y) {
     Location.x += x;
     Location.y += y;
+}
+
+void Model2d::Translate(Vector2 Vector) {
+    Location += Vector;
+    cout << Location.x;
 }
 
 void Model2d::Rotate(float r) {
@@ -213,6 +225,7 @@ void Model2d::DisplayFunc() {
 
     glDrawArrays(DisplayMode, 0, VertexAttribute->Contents.size()/2);
     glDisableVertexAttribArray(VertexAttribute->AttribIndex);
+    glDisableVertexAttribArray(UVAttribute->AttribIndex);
 }
 
 
@@ -317,7 +330,7 @@ int main (int argc, char* argv[]) {
     const GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     WindowWidth = mode->width;
     WindowHeight = mode->height;
-    Window = glfwCreateWindow(WindowWidth, WindowHeight, "test", glfwGetPrimaryMonitor(), NULL);
+    Window = glfwCreateWindow(WindowWidth, WindowHeight, "test", NULL, NULL);
     glfwMakeContextCurrent(Window);
 
     ilInit();

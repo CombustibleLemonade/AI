@@ -12,10 +12,15 @@ class Block {
     Block* Next;
     Block* Previous;
     Model2d* Square;
+    void OnColision();
 public:
     Block(char* TextureName);
     PageLayoutElement Page;
-    bool BlockCollisionCheck();
+
+    void Translate(Vector2 Offset);
+    void BlockCollisionCheck(Vector2 Location);
 };
+
+void CollisionCheck (Vector2 Location);
 
 #endif

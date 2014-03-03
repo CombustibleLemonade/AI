@@ -44,6 +44,7 @@ public:
     Vector2();
     Vector2(float xArg, float yArg);
     Vector2 operator + (const Vector2& Param);
+    void operator += (const Vector2& Param);
 };
 
 class Texture {
@@ -128,5 +129,6 @@ Model2d* ReturnModel2d(int Layer, int Index);
 Camera2d* ReturnCamera2d(int Index);
 Camera2d* ReturnDefaultCamera2d();
 GLFWwindow* ReturnWindow();
+
 void ExitMainLoop();
 #endif

@@ -26,10 +26,9 @@ float NewLocationY = 0;
 
 void InitFunc() {
     int i = 0;
-    while (i < 10) {
-        NewBlock = new Block("Plus.png");
-        i++;
-    }
+    NewBlock = new Block("Plus.png");
+    NewBlock->Translate(Vector2(0.0, 3.0));
+    new Block("Minus.png");
 }
 
 void DisplayFunc () {
@@ -54,6 +53,22 @@ void DisplayFunc () {
         OldLocationY = y;
     }else{
         NewlyPressedDown = true;
+        double x, y;
+        int WindowXDimension, WindowYDimension;
+        glfwGetWindowSize(ReturnWindow(), &WindowXDimension, &WindowYDimension);
+        glfwGetCursorPos(ReturnWindow(), &x, &y);
+        x -= 0.5 * WindowXDimension;
+        y -= 0.5 * WindowYDimension;
+        y *= -1;
+
+        x /= ReturnDefaultCamera2d()->Zoom/2;
+        y /= ReturnDefaultCamera2d()->Zoom/2;
+
+        x -= ReturnDefaultCamera2d()->x;
+        y -= ReturnDefaultCamera2d()->y;s
+        cout << x << " " << y << endl;
+
+        CollisionCheck(Vector2(x, y));
     }
 }
 
