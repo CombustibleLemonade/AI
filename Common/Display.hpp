@@ -8,6 +8,7 @@
 #define SCREEN_BOTTOM_RIGHT_SPACE 5
 
 #include <vector>
+#include <GLFW/glfw3.h>
 
 void InitFunc();
 
@@ -126,5 +127,6 @@ Model2d* AddModel2d (int Layer);
 Model2d* ReturnModel2d(int Layer, int Index);
 Camera2d* ReturnCamera2d(int Index);
 Camera2d* ReturnDefaultCamera2d();
-
+GLFWwindow* ReturnWindow();
+void ExitMainLoop();
 #endif

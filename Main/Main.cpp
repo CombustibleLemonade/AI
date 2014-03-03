@@ -6,10 +6,8 @@
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
-#include <GLUT/glut.h>
 #else
 #include <GL/glew.h>
-#include <GL/freeglut.h>
 #endif
 
 #define ILUT_USE_OPENGL

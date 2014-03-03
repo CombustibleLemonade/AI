@@ -6,6 +6,8 @@
 #include <GL/freeglut.h>
 #endif
 
+#include <GLFW/glfw3.h>
+
 #define ILUT_USE_OPENGL
 #include <IL/il.h>
 #include <IL/ilut.h>
@@ -18,13 +20,19 @@
 
 #include "LoadText.hpp"
 #include "Display.hpp"
+#include "Blocks.hpp"
+
 
 using namespace std;
+
+bool ExitMainLoopBool = false;
+int WindowWidth = 1920, WindowHeight = 1080;
 
 vector< vector<Model2d*> > Layers;
 vector<Camera2d*> Cameras;
 
 Camera2d* DefaultCamera2d;
+GLFWwindow* Window;
 
 Attribute::Attribute() {
     AttribIndex = 0;
@@ -91,7 +99,7 @@ Model2d::Model2d (int Layer) {
     Program = glCreateProgram();
     DisplayMode = GL_TRIANGLES;
     Rotation = 0;
-    Scale.x = 2;
+    Scale.x = 1;
     Scale.y = 1;
 }
 
@@ -182,8 +190,8 @@ void Model2d::DisplayFunc() {
     glUniform2f(ScaleUniform.UniformIndex, Scale.x, Scale.y);
     glUniform1f(ZoomUniform.UniformIndex, Camera->Zoom);
 
-    glUniform1i(XResUniform.UniformIndex, glutGet(GLUT_WINDOW_WIDTH));
-    glUniform1i(YResUniform.UniformIndex, glutGet(GLUT_WINDOW_HEIGHT));
+    glUniform1i(XResUniform.UniformIndex, WindowWidth);
+    glUniform1i(YResUniform.UniformIndex, WindowHeight);
 
     glEnableVertexAttribArray(VertexAttribute->AttribIndex);
     glVertexAttribPointer(
@@ -192,7 +200,7 @@ void Model2d::DisplayFunc() {
                 GL_FLOAT,
                 GL_FALSE,
                 0,
-                VertexAttribute->Contents.data()    );
+                VertexAttribute->Contents.data() );
 
     glEnableVertexAttribArray(UVAttribute->AttribIndex);
     glVertexAttribPointer(
@@ -201,7 +209,7 @@ void Model2d::DisplayFunc() {
                 GL_FLOAT,
                 GL_FALSE,
                 0,
-                UVAttribute->Contents.data()    );
+                UVAttribute->Contents.data() );
 
     glDrawArrays(DisplayMode, 0, VertexAttribute->Contents.size()/2);
     glDisableVertexAttribArray(VertexAttribute->AttribIndex);
@@ -211,10 +219,10 @@ void Model2d::DisplayFunc() {
 void DisplayFunc() __attribute__((weak));
 void IdleFunc() __attribute__((weak));
 void InitFunc() __attribute__((weak));
-void KeyboardFunc(unsigned char Key, int x, int y) __attribute__((weak));
-void MouseFunc(int Button, int State, int x, int y) __attribute__((weak));
+//void KeyboardFunc(unsigned char Key, int x, int y) __attribute__((weak));
+void MouseFunc(int Button, int Action, int Mods) __attribute__((weak));
+void ScrollFunc(double XOffset, double YOffset) __attribute__((weak));
 void MotionFunc(int x, int y) __attribute__((weak));
-void PassiveMotionFunc(int x, int y) __attribute__((weak));
 
 void DisplayFuncRedirect() {
     glClearColor(0.2, 0.3, 0.6, 0.0);
@@ -235,7 +243,6 @@ void DisplayFuncRedirect() {
     if (DisplayFunc) {
         DisplayFunc();
     }
-    glutSwapBuffers();
 }
 
 void IdleFuncRedirect() {
@@ -246,34 +253,33 @@ void IdleFuncRedirect() {
 }
 
 void InitFuncRedirect() {
-    glutFullScreen();
     DefaultCamera2d = new Camera2d;
     if (InitFunc) {
         InitFunc();
     }
 }
 
-void KeyboardFuncRedirect(unsigned char Key, int x, int y) {
+/*void KeyboardFuncRedirect(unsigned char Key, int x, int y) {
     if (KeyboardFunc) {
         KeyboardFunc(Key, x, y);
     }
-}
+}*/
 
-void MouseFuncRedirect(int Button, int State, int x, int y){
+void MouseFuncRedirect(GLFWwindow* Window, int Button, int Action, int Mods){
     if (MouseFunc) {
-        MouseFunc(Button, State, x, y);
+        MouseFunc(Button, Action, Mods);
     }
 }
 
-void MotionFuncRedirect(int x, int y) {
+void ScrollFuncRedirect(GLFWwindow* Window, double XOffset, double YOffset) {
+    if (ScrollFunc) {
+        ScrollFunc(XOffset, YOffset);
+    }
+}
+
+void MotionFuncRedirect(GLFWwindow* Window, double x, double y) {
     if (MotionFunc) {
         MotionFunc(x, y);
-    }
-}
-
-void PassiveMotionFuncRedirect(int x, int y) {
-    if (PassiveMotionFunc) {
-        PassiveMotionFunc(x, y);
     }
 }
 
@@ -294,29 +300,47 @@ Camera2d* ReturnDefaultCamera2d () {
     return DefaultCamera2d;
 }
 
+GLFWwindow* ReturnWindow() {
+    return Window;
+}
+
+void ExitMainLoop() {
+    ExitMainLoopBool = true;
+}
+
 int main (int argc, char* argv[]) {
     // This bit is Super important!
-    glutInit(&argc, argv);
 
-    glewExperimental = GL_TRUE;
+    glutInit(&argc, argv);
+    glfwInit();
+
+    const GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    WindowWidth = mode->width;
+    WindowHeight = mode->height;
+    Window = glfwCreateWindow(WindowWidth, WindowHeight, "test", glfwGetPrimaryMonitor(), NULL);
+    glfwMakeContextCurrent(Window);
 
     ilInit();
     ilutInit();
     ilutRenderer(ILUT_OPENGL_CONV);
 
-    glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE|GLUT_DEPTH);
-    glutInitWindowSize(1280, 720);
-    glutCreateWindow("AI");
+    glewExperimental = GL_TRUE;
     glewInit();
 
-    glutDisplayFunc(DisplayFuncRedirect);
-    glutIdleFunc(IdleFuncRedirect);
-    glutKeyboardFunc(KeyboardFuncRedirect);
-    glutMouseFunc(MouseFuncRedirect);
-    glutMotionFunc(MotionFuncRedirect);
-    glutPassiveMotionFunc(PassiveMotionFuncRedirect);
+    glfwSetMouseButtonCallback(Window, MouseFuncRedirect);
+    glfwSetScrollCallback(Window, ScrollFuncRedirect);
+    glfwSetCursorPosCallback(Window, MotionFuncRedirect);
 
     InitFuncRedirect();
+    while (!glfwWindowShouldClose(Window) && !ExitMainLoopBool) {
+        glLoadIdentity();
+        glfwGetWindowSize(Window, &WindowWidth, &WindowHeight);
+        DisplayFuncRedirect();
 
-    glutMainLoop();
+        glfwSwapBuffers(Window);
+        glfwPollEvents();
+    }
+    glfwDestroyWindow(Window);
+    glfwTerminate();
+    return 1;
 }

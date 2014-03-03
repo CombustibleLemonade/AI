@@ -3,11 +3,11 @@
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
-#include <GLUT/glut.h>
 #else
 #include <GL/glew.h>
-#include <GL/freeglut.h>
 #endif
+
+#include <GLFW/glfw3.h>
 
 #include "Display.hpp"
 #include "Blocks.hpp"
@@ -17,45 +17,50 @@ using namespace std;
 
 Block* NewBlock;
 
-bool MMBDown = false;
-int OldLocationX = 0;
-int OldLocationY = 0;
+bool NewlyPressedDown = false;
+
+float OldLocationX = 0;
+float OldLocationY = 0;
 float NewLocationX = 0;
 float NewLocationY = 0;
 
 void InitFunc() {
-    NewBlock = new Block("Plus.png");
-}
-
-void KeyboardFunc (unsigned char Key, int x, int y) {
-    cout << Key << endl;
-    if (Key == 27) {
-        glutLeaveMainLoop();
+    int i = 0;
+    while (i < 10) {
+        NewBlock = new Block("Plus.png");
+        i++;
     }
 }
 
-void MouseFunc(int Button, int State, int x, int y) {
-    if (Button == 1) {
-        if (State == GLUT_DOWN) {
-            MMBDown = true;
-        } else {
-            MMBDown = false;
+void DisplayFunc () {
+    if(glfwGetKey(ReturnWindow(), GLFW_KEY_ESCAPE)) {
+        ExitMainLoop();
+    }
+    if(glfwGetMouseButton(ReturnWindow(), GLFW_MOUSE_BUTTON_MIDDLE)) {
+        double x, y;
+        glfwGetCursorPos(ReturnWindow(), &x, &y);
+        if (NewlyPressedDown) {
+            OldLocationX = x;
+            OldLocationY = y;
+            NewlyPressedDown = false;
         }
-    }
-    OldLocationX = x;
-    OldLocationY = y;
-}
-
-void MotionFunc (int x, int y) {
-    if (MMBDown) {
-        NewLocationX += (x - OldLocationX)/200.0*2;
-        NewLocationY -= (y - OldLocationY)/200.0*2;
+        NewLocationX += (x - OldLocationX)/ReturnDefaultCamera2d()->Zoom*2;
+        NewLocationY -= (y - OldLocationY)/ReturnDefaultCamera2d()->Zoom*2;
 
         ReturnDefaultCamera2d()->x = NewLocationX;
         ReturnDefaultCamera2d()->y = NewLocationY;
-        cout << NewLocationX << " " << NewLocationY << endl;
 
         OldLocationX = x;
         OldLocationY = y;
+    }else{
+        NewlyPressedDown = true;
+    }
+}
+
+void ScrollFunc (double XOffset, double YOffset) {
+    if (YOffset == 1) {
+        ReturnDefaultCamera2d()->Zoom *= 1.1;
+    } else if (YOffset == -1) {
+        ReturnDefaultCamera2d()->Zoom /= 1.1;
     }
 }

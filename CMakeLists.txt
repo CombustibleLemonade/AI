@@ -33,6 +33,14 @@ endif(NOT OPENGL_FOUND)
 #########################################################
 find_package(GLEW REQUIRED)
 include_directories(${GLEW_INCLUDE_PATH})
+
+#########################################################
+# Find GLFW
+#########################################################
+add_subdirectory(cmake/Packages/glfw-3.0.4)
+include_directories(cmake/Packages/glfw-3.0.4/include)
+
+
 #########################################################
 # Find DevIL
 #########################################################
@@ -58,11 +66,13 @@ add_executable(plotTwist
 #########################################################
 
   # create the program "test"
-target_link_libraries(plotTwist
+target_link_libraries(plotTwist glfw
     ${OPENGL_LIBRARIES}
     ${GLUT_LIBRARY}
     ${GLEW_LIBRARY}
     ${IL_LIBRARIES}
     ${ILU_LIBRARIES}
     ${ILUT_LIBRARIES}
+    ${OPENGL_glu_LIBRARY}
+    ${GLFW_LIBRARIES}
 )
