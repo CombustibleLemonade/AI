@@ -65,7 +65,7 @@ void DisplayFunc () {
         y /= ReturnDefaultCamera2d()->Zoom/2;
 
         x -= ReturnDefaultCamera2d()->x;
-        y -= ReturnDefaultCamera2d()->y;s
+        y -= ReturnDefaultCamera2d()->y;
         cout << x << " " << y << endl;
 
         CollisionCheck(Vector2(x, y));
