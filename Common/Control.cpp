@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <thread>
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
@@ -16,6 +17,8 @@
 using namespace std;
 
 Block* NewBlock;
+float TimeAddedUp;
+float AmountOfMeasurements;
 
 bool NewlyPressedDown = false;
 
@@ -24,11 +27,17 @@ float OldLocationY = 0;
 float NewLocationX = 0;
 float NewLocationY = 0;
 
+void LoadCubes(int i) {
+    int j = 0;
+    while (j<30) {
+        NewBlock = new Block("Plus.png");
+        NewBlock->Translate(Vector2(j*2.5, i*2.5));
+        j++;
+    }
+}
+
 void InitFunc() {
-    int i = 0;
-    NewBlock = new Block("Plus.png");
-    NewBlock->Translate(Vector2(0.0, 3.0));
-    new Block("Minus.png");
+    Block NewBlock("Minus.png");
 }
 
 void DisplayFunc () {
@@ -66,10 +75,13 @@ void DisplayFunc () {
 
         x -= ReturnDefaultCamera2d()->x;
         y -= ReturnDefaultCamera2d()->y;
-        cout << x << " " << y << endl;
 
         CollisionCheck(Vector2(x, y));
     }
+    AmountOfMeasurements++;
+    TimeAddedUp = TimeAddedUp + glfwGetTime();
+    glfwSetTime(0);
+    //cout << 1/(TimeAddedUp/AmountOfMeasurements) << endl;
 }
 
 void ScrollFunc (double XOffset, double YOffset) {

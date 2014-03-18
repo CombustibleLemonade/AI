@@ -15,7 +15,6 @@
 #include "Display.hpp"
 #include "Blocks.hpp"
 
-
 using namespace std;
 vector<Block*> AllBlocks;
 
@@ -23,8 +22,22 @@ void Block::OnColision() {
     cout << "win: ";
 }
 
+void Block::Translate(Vector2 Offset) {
+    Square->Translate(Offset);
+}
+
+void Block::BlockCollisionCheck(/*Vector2 CollisionLocation*/) {
+    bool DoesCollide;
+    //DoesCollide = Location.x<CollisionLocation.x;
+    cout << Test.x << endl;
+    if (DoesCollide) {
+        OnColision();
+    }
+}
+
 Block::Block(char *TextureName) {
     AllBlocks.push_back(this);
+    //create block 2d model
     Square = AddModel2d(0);
 
     float Vertices[] = {
@@ -49,22 +62,11 @@ Block::Block(char *TextureName) {
     Square->DisplayMode = GL_QUADS;
 }
 
-void Block::Translate(Vector2 Offset) {
-    Square->Translate(Offset);
-}
-
-void Block::BlockCollisionCheck(Vector2 Location) {
-    bool DoesCollide = Location.x<(Square->Location.x+1.0) && Location.x>(Square->Location.x-1.0) && Location.y<(Square->Location.y+1.0) && Location.y>(Square->Location.y-1.0);
-    if (DoesCollide) {
-        OnColision();
-    }
-}
-
-void CollisionCheck (Vector2 Location) {
+void CollisionCheck (Vector2 CursorLocation) {
     int i = 0;
     int BlockCount = AllBlocks.size();
     while (i<BlockCount) {
-        AllBlocks[i]->BlockCollisionCheck(Location);
+        AllBlocks[i]->BlockCollisionCheck();
         i++;
     }
 }

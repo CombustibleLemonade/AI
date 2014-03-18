@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string>
+#include <thread>
 
 #include "LoadText.hpp"
 #include "Display.hpp"
@@ -62,7 +63,10 @@ Vector2::Vector2() {
     //Vector2 operator + (const Vector2);
 };
 
-Vector2::Vector2(float xArg, float yArg) : x(xArg), y(yArg) {}
+Vector2::Vector2(float xArg, float yArg)/* : x(xArg), y(yArg) */{
+    x = xArg;
+    y = yArg;
+}
 
 Vector2 Vector2::operator + (const Vector2& Param) {
     Vector2 Temp;
@@ -241,7 +245,9 @@ void DisplayFuncRedirect() {
     glClearColor(0.2, 0.3, 0.6, 0.0);
 
     glClear(GL_COLOR_BUFFER_BIT);
-
+    if (DisplayFunc) {
+        DisplayFunc();
+    }
     int i = 0;
     int j = 0;
     while (i < Layers.size()) {
@@ -251,11 +257,7 @@ void DisplayFuncRedirect() {
         }
         i++;
     }
-
     i = 0;
-    if (DisplayFunc) {
-        DisplayFunc();
-    }
 }
 
 void IdleFuncRedirect() {
@@ -323,6 +325,11 @@ void ExitMainLoop() {
 
 int main (int argc, char* argv[]) {
     // This bit is Super important!
+    int i = 0;
+    /*while (i < 6){
+        new thread(Test);
+        i++;
+    }*/
 
     glutInit(&argc, argv);
     glfwInit();
@@ -330,7 +337,7 @@ int main (int argc, char* argv[]) {
     const GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     WindowWidth = mode->width;
     WindowHeight = mode->height;
-    Window = glfwCreateWindow(WindowWidth, WindowHeight, "test", NULL, NULL);
+    Window = glfwCreateWindow(1280, 720, "test", NULL, NULL);
     glfwMakeContextCurrent(Window);
 
     ilInit();

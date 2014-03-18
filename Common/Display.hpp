@@ -74,6 +74,7 @@ class Model2d {
     int CompileOk;
     std::vector<Attribute*> Attributes;
     std::vector<Uniform1f*> Uniforms;
+    std::vector<int> Test;
 
     Attribute* VertexAttribute;
     Attribute* UVAttribute;

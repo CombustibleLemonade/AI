@@ -40,7 +40,6 @@ include_directories(${GLEW_INCLUDE_PATH})
 add_subdirectory(cmake/Packages/glfw-3.0.4)
 include_directories(cmake/Packages/glfw-3.0.4/include)
 
-
 #########################################################
 # Find DevIL
 #########################################################
@@ -53,6 +52,8 @@ link_directories(${ILUT_LIBRARIES})
 #########################################################
 # Include Files
 #########################################################
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
+
 include_directories(${CMAKE_SOURCE_DIR}/Common)
 add_executable(plotTwist
         Main/Main.cpp
