@@ -6,7 +6,7 @@ class SquareLayoutElement{
 public:
     Model2d* Square;
     SquareLayoutElement(char* Texture);
-    void CollisionCheck(Vector2 Location);
+    bool CollisionCheck(Vector2 Location);
 };
 
 class Block {

@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+62b4af7e89aa09e78166afd499b6ed9c cmake/Packages/FTGL/CMakeFiles/doc
+efc98ffdac1e457f9d218d5828d42cda cmake/Packages/freetype-2.5.3/CMakeFiles/dist
+f784fb598ee0f8ee913257a5b188a45e cmake/Packages/glfw-3.0.4/CMakeFiles/uninstall

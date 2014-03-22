@@ -7,6 +7,7 @@
 #endif
 
 #include <GLFW/glfw3.h>
+#include <FTGL/ftgl.h>
 
 #define ILUT_USE_OPENGL
 #include <IL/il.h>
@@ -379,12 +380,6 @@ void MainLoop () {
 
 int main (int argc, char* argv[]) {
     // This bit is Super important!
-    int i = 0;
-    /*while (i < 6){
-        new thread(Test);
-        i++;
-    }*/
-
     glutInit(&argc, argv);
     glfwInit();
 
@@ -394,7 +389,7 @@ int main (int argc, char* argv[]) {
 
     //glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     //glfwWindowHint(GLFW_DECORATED, GL_FALSE);
-    Window = glfwCreateWindow(1280, 720, "test", NULL, NULL);
+    Window = glfwCreateWindow(WindowWidth, WindowHeight, "test", glfwGetPrimaryMonitor(), NULL);
     glfwMakeContextCurrent(Window);
 
     ilInit();

@@ -42,18 +42,19 @@ SquareLayoutElement::SquareLayoutElement(char* Texture){
     Square->LinkProgram();
 }
 
-void SquareLayoutElement::CollisionCheck(Vector2 Location){
-    cout << Square->Location.x << endl;
+bool SquareLayoutElement::CollisionCheck(Vector2 Location){
+    if (Location.x<(Square->Location.x+1.0) && Location.x>(Square->Location.x-1.0) && Location.y<(Square->Location.y+1.0) && Location.y>(Square->Location.y-1.0)) {
+        cout << "collide: ";
+        return true;
+    }
 }
 
 Block::Block(char* Texture) {
     AllBlocks.push_back(this);
     Square = new SquareLayoutElement(Texture);
-    cout << Square->Square->Location.x << endl;
 }
 
 void Block::CollisionCheck(Vector2 Location) {
-    cout << Square->Square->Location.x << endl;
     Square->CollisionCheck(Location);
 }
 

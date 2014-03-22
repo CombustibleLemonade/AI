@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="FTGL" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Packages\;CMake Files\cmake\Packages\FTGL\;CMake Files\cmake\Packages\FTGL\src\;CMake Files\cmake\Packages\glfw-3.0.4\;CMake Files\cmake\Packages\glfw-3.0.4\docs\;CMake Files\cmake\Packages\glfw-3.0.4\src\;CMake Files\cmake\Packages\glfw-3.0.4\examples\;CMake Files\cmake\Packages\glfw-3.0.4\tests\;CMake Files\cmake\Packages\freetype-2.5.3\;CMake Files\cmake\Modules\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="doc">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 doc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ftgl">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/libftgld.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DPACKAGE_VERSION=&quot;2.1.3&quot;" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/cmake" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/freetype2" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 ftgl" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ftgl/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/libftgld.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DPACKAGE_VERSION=&quot;2.1.3&quot;" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/cmake" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/freetype2" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 ftgl/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTBuffer.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharmap.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCleanup.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTContour.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFace.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBitmapFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBufferFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTExtrudeFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFontGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTOutlineFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPixmapFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPolygonFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTextureFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTriangleExtractorFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBitmapGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBufferGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTExtrudeGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyphGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTOutlineGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPixmapGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPolygonGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTextureGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTriangleExtractorGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyphContainer.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayout.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayoutGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTSimpleLayout.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLibrary.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTPoint.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTSize.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVectoriser.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharToGlyphIndexMap.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharmap.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCleanup.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTContour.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFace.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBitmapFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBufferFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTExtrudeFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTOutlineFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPixmapFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPolygonFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTextureFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTriangleExtractorFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBBox.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBitmapGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBuffer.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBufferFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBufferGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTExtrdGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLBitmapFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLExtrdFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLOutlineFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLPixmapFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLPolygonFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLTextureFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLTriangleExtractorFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTLayout.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTOutlineGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPixmapGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPoint.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPolyGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTSimpleLayout.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTTextureGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/ftgl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBitmapGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBufferGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTExtrudeGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTOutlineGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPixmapGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPolygonGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTextureGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTriangleExtractorGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyphContainer.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTInternals.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayoutImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTSimpleLayoutImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLibrary.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTList.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTSize.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTUnicode.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVector.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVectoriser.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Modules/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\cmake\Modules\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

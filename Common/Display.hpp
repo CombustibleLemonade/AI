@@ -131,6 +131,9 @@ public:
     void DisplayFunc();
 };
 
+class Text2d: public Model2d{
+};
+
 Model2d* AddModel2d (int Layer);
 Model2d* ReturnModel2d(int Layer, int Index);
 Camera2d* ReturnCamera2d(int Index);

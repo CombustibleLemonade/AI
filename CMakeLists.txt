@@ -41,6 +41,18 @@ add_subdirectory(cmake/Packages/glfw-3.0.4)
 include_directories(cmake/Packages/glfw-3.0.4/include)
 
 #########################################################
+# Find FreeType
+#########################################################
+add_subdirectory(cmake/Packages/freetype-2.5.3)
+include_directories(cmake/Packages/freetype-2.5.3/include)
+
+#########################################################
+# Find FTGL
+#########################################################
+add_subdirectory(cmake/Packages/FTGL)
+include_directories(cmake/Packages/FTGL/src)
+
+#########################################################
 # Find DevIL
 #########################################################
 find_package(DevIL REQUIRED)

@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="HW_OPENGL" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Packages\;CMake Files\cmake\Packages\FTGL\;CMake Files\cmake\Packages\FTGL\src\;CMake Files\cmake\Packages\glfw-3.0.4\;CMake Files\cmake\Packages\glfw-3.0.4\docs\;CMake Files\cmake\Packages\glfw-3.0.4\src\;CMake Files\cmake\Packages\glfw-3.0.4\examples\;CMake Files\cmake\Packages\glfw-3.0.4\tests\;CMake Files\cmake\Packages\freetype-2.5.3\;CMake Files\cmake\Modules\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="package">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 package" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="package_source">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 package_source" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plotTwist">
+         <Option output="/home/jan/GitRepository/AI/Game/plotTwist" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/Common" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 plotTwist" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plotTwist/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/plotTwist" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/Common" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 plotTwist/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/jan/GitRepository/AI/Game" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uninstall">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/Makefile&quot;  VERBOSE=1 uninstall" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glfw">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/libglfw3.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GLFW_USE_CONFIG_H" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 glfw" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glfw/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/libglfw3.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GLFW_USE_CONFIG_H" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 glfw/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="boing">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/boing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 boing" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="boing/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/boing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 boing/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gears">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/gears" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 gears" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gears/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/gears" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 gears/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="heightmap">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/heightmap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 heightmap" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="heightmap/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/heightmap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 heightmap/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="simple">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/simple" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 simple" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="simple/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/simple" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 simple/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="splitview">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/splitview" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 splitview" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="splitview/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/splitview" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 splitview/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="wave">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/wave" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 wave" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="wave/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/wave" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 wave/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/examples/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="accuracy">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/accuracy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 accuracy" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="accuracy/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/accuracy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 accuracy/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="clipboard">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/clipboard" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clipboard" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="clipboard/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/clipboard" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clipboard/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="defaults">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/defaults" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 defaults" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="defaults/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/defaults" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 defaults/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="events">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/events" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 events" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="events/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/events" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 events/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fsaa">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/fsaa" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 fsaa" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fsaa/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/fsaa" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 fsaa/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gamma">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/gamma" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 gamma" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gamma/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/gamma" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 gamma/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glfwinfo">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/glfwinfo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 glfwinfo" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glfwinfo/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/glfwinfo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 glfwinfo/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iconify">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/iconify" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 iconify" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iconify/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/iconify" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 iconify/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="joysticks">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/joysticks" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 joysticks" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="joysticks/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/joysticks" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 joysticks/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="modes">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/modes" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 modes" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="modes/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/modes" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 modes/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="peter">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/peter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 peter" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="peter/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/peter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 peter/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="reopen">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/reopen" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 reopen" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="reopen/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/reopen" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 reopen/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="sharing">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/sharing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 sharing" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="sharing/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/sharing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 sharing/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="tearing">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/tearing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 tearing" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="tearing/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/tearing" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 tearing/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="threads">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/threads" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 threads" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="threads/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/threads" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 threads/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="title">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/title" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 title" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="title/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/title" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 title/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="windows">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/windows" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 windows" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="windows/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/windows" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 windows/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 dist" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="freetype">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/libfreetype.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DFT2_BUILD_LIBRARY" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 freetype" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="freetype/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/libfreetype.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DFT2_BUILD_LIBRARY" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 freetype/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="doc">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 doc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ftgl">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/libftgld.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DPACKAGE_VERSION=&quot;2.1.3&quot;" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/cmake" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/freetype2" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 ftgl" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ftgl/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/libftgld.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DPACKAGE_VERSION=&quot;2.1.3&quot;" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/cmake" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/freetype2" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 ftgl/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/FTGL/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Blocks.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Control.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Display.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/LoadText.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Main/Main.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTBuffer.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharmap.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCleanup.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTContour.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFace.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBitmapFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBufferFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTExtrudeFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFontGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTOutlineFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPixmapFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPolygonFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTextureFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTriangleExtractorFont.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBitmapGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBufferGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTExtrudeGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyphGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTOutlineGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPixmapGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPolygonGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTextureGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTriangleExtractorGlyph.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyphContainer.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayout.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayoutGlue.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTSimpleLayout.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLibrary.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTPoint.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTSize.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVectoriser.cpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit/autofit.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftadvanc.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftbbox.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftbitmap.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftcalc.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftcid.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftdbgmem.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftdebug.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftfstype.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgasp.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgloadr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftglyph.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgxval.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftinit.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftlcdfil.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftmm.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftobjs.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftotval.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftoutln.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftpatent.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftpfr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftrfork.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsnames.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftstream.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftstroke.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsynth.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsystem.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/fttrigon.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/fttype1.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftutil.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftwinfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftxf86.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bdf/bdf.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bzip2/ftbzip2.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cache/ftcache.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cff/cff.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cid/type1cid.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/gzip/ftgzip.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/lzw/ftlzw.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pcf/pcf.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pfr/pfr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux/psaux.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pshinter/pshinter.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames/psmodule.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster/raster.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt/sfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth/smooth.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype/truetype.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/type1/type1.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/type42/type42.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/winfonts/winfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps/getopt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps/tinycthread.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/boing.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/gears.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/heightmap.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/simple.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/splitview.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/wave.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/clipboard.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/context.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/gamma.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glx_context.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/init.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/input.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/joystick.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/monitor.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/time.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/window.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_clipboard.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_gamma.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_init.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_joystick.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_monitor.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_time.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_unicode.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_window.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/accuracy.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/clipboard.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/defaults.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/events.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/fsaa.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/gamma.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/glfwinfo.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/iconify.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/joysticks.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/modes.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/peter.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/reopen.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/sharing.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/tearing.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/threads.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/title.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/windows.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Blocks.hpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Control.hpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/Display.hpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Common/LoadText.hpp">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/Game/cmake/Packages/glfw-3.0.4/src/glfw_config.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharToGlyphIndexMap.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCharmap.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTCleanup.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTContour.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFace.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBitmapFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTBufferFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTExtrudeFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTOutlineFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPixmapFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTPolygonFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTextureFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTFont/FTTriangleExtractorFontImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBBox.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBitmapGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBuffer.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBufferFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTBufferGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTExtrdGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLBitmapFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLExtrdFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLOutlineFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLPixmapFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLPolygonFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLTextureFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGLTriangleExtractorFont.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTLayout.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTOutlineGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPixmapGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPoint.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTPolyGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTSimpleLayout.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/FTTextureGlyph.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGL/ftgl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBitmapGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTBufferGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTExtrudeGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTOutlineGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPixmapGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTPolygonGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTextureGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyph/FTTriangleExtractorGlyphImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTGlyphContainer.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTInternals.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTLayoutImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLayout/FTSimpleLayoutImpl.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTLibrary.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTList.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTSize.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTUnicode.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVector.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/FTVectoriser.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bdf/bdf.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pcf/pcf.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames/psmodule.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/winfonts/winfnt.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps/getopt.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/deps/tinycthread.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include/GLFW/glfw3.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include/GLFW/glfw3native.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glx_platform.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/internal.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/x11_platform.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Modules/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\cmake\Modules\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

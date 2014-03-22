@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="freetype" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Packages\;CMake Files\cmake\Packages\FTGL\;CMake Files\cmake\Packages\FTGL\src\;CMake Files\cmake\Packages\glfw-3.0.4\;CMake Files\cmake\Packages\glfw-3.0.4\docs\;CMake Files\cmake\Packages\glfw-3.0.4\src\;CMake Files\cmake\Packages\glfw-3.0.4\examples\;CMake Files\cmake\Packages\glfw-3.0.4\tests\;CMake Files\cmake\Packages\freetype-2.5.3\;CMake Files\cmake\Modules\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist">
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 dist" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="freetype">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/libfreetype.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DFT2_BUILD_LIBRARY" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 freetype" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="freetype/fast">
+         <Option output="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/libfreetype.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DFT2_BUILD_LIBRARY" />
+            <Add directory="/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/include" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype" />
+            <Add directory="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 freetype/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/jan/GitRepository/AI/Game/cmake/Packages/freetype-2.5.3/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/autofit/autofit.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftadvanc.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftbbox.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftbitmap.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftcalc.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftcid.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftdbgmem.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftdebug.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftfstype.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgasp.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgloadr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftglyph.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftgxval.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftinit.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftlcdfil.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftmm.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftobjs.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftotval.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftoutln.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftpatent.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftpfr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftrfork.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsnames.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftstream.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftstroke.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsynth.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftsystem.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/fttrigon.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/fttype1.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftutil.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftwinfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/base/ftxf86.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bdf/bdf.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bzip2/ftbzip2.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cache/ftcache.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cff/cff.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/cid/type1cid.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/gzip/ftgzip.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/lzw/ftlzw.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pcf/pcf.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pfr/pfr.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psaux/psaux.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pshinter/pshinter.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames/psmodule.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/raster/raster.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/sfnt/sfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/smooth/smooth.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/truetype/truetype.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/type1/type1.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/type42/type42.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/winfonts/winfnt.c">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/bdf/bdf.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/pcf/pcf.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/psnames/psmodule.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/src/winfonts/winfnt.h">
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/FTGL/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\FTGL\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\docs\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw_config.h.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfig.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfwConfigVersion.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/glfw3.pc.in">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\src\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/examples/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\examples\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/glfw-3.0.4/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\glfw-3.0.4\tests\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Packages/freetype-2.5.3/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\cmake\Packages\freetype-2.5.3\" />
+      </Unit>
+      <Unit filename="/home/jan/GitRepository/AI/cmake/Modules/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\cmake\Modules\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
