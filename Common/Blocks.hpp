@@ -1,42 +1,28 @@
 #ifndef BLOCKS
 #define BLOCKS
-#include <vector>
+//#include <vector>
 
-class BackgroundElement {
-};
-
-class TextElement {
-};
-
-class PageLayoutElement {
-    BackgroundElement Background;
-    std::vector<int> TextElements;
-    TextElement Text;
-};
-
-class SquareLayoutElement {
-    Vector2 Location;
-    Model2d* Square;
+class SquareLayoutElement{
 public:
-    void CollisionCheck();
+    Model2d* Square;
+    SquareLayoutElement(char* Texture);
+    void CollisionCheck(Vector2 Location);
 };
 
 class Block {
-    std::vector<int> TestVector;
-    Block* Next;
-    Block* Previous;
-    Model2d* Square;
-    void OnColision();
+    std::vector<Block*> Previous;
+    std::vector<Block*> Next;
 public:
-    Vector2 Test;
+    SquareLayoutElement* Square;
+    Block(char* Texture);
 
-    Block(char* TextureName);
-    PageLayoutElement Page;
+    void CollisionCheck(Vector2 Location);
 
-    void Translate(Vector2 Offset);
-    void BlockCollisionCheck(/*Vector2 CollisionLocation*/);
+    void AddDependency(Block* PreviousBlock);
 };
 
-void CollisionCheck (Vector2 CursorLocation);
+void CollisionCheck(Vector2 Location);
+
+Block* ReturnFirstBlock ();
 
 #endif

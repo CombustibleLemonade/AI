@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <thread>
+#include <math.h>
 
 #ifdef __APPLE__
 #include <GLEW/glew.h>
@@ -16,78 +17,36 @@
 
 using namespace std;
 
-Block* NewBlock;
-float TimeAddedUp;
-float AmountOfMeasurements;
+bool Drag = false;
+Vector2 LastClickLocation;
+Vector2 CursorLocation;
 
-bool NewlyPressedDown = false;
-
-float OldLocationX = 0;
-float OldLocationY = 0;
-float NewLocationX = 0;
-float NewLocationY = 0;
-
-void LoadCubes(int i) {
-    int j = 0;
-    while (j<30) {
-        NewBlock = new Block("Plus.png");
-        NewBlock->Translate(Vector2(j*2.5, i*2.5));
-        j++;
-    }
-}
+Block* Test;
 
 void InitFunc() {
-    Block NewBlock("Minus.png");
+    //Block NewBlock("Minus.png");
+    Test = new Block("Minus.png");
 }
 
-void DisplayFunc () {
-    if(glfwGetKey(ReturnWindow(), GLFW_KEY_ESCAPE)) {
-        ExitMainLoop();
+void MouseFunc(int Button, int Action, int Mods) {
+    if (Button == 2) {
+        Drag = !Drag;
     }
-    if(glfwGetMouseButton(ReturnWindow(), GLFW_MOUSE_BUTTON_MIDDLE)) {
-        double x, y;
-        glfwGetCursorPos(ReturnWindow(), &x, &y);
-        if (NewlyPressedDown) {
-            OldLocationX = x;
-            OldLocationY = y;
-            NewlyPressedDown = false;
-        }
-        NewLocationX += (x - OldLocationX)/ReturnDefaultCamera2d()->Zoom*2;
-        NewLocationY -= (y - OldLocationY)/ReturnDefaultCamera2d()->Zoom*2;
-
-        ReturnDefaultCamera2d()->x = NewLocationX;
-        ReturnDefaultCamera2d()->y = NewLocationY;
-
-        OldLocationX = x;
-        OldLocationY = y;
-    }else{
-        NewlyPressedDown = true;
-        double x, y;
-        int WindowXDimension, WindowYDimension;
-        glfwGetWindowSize(ReturnWindow(), &WindowXDimension, &WindowYDimension);
-        glfwGetCursorPos(ReturnWindow(), &x, &y);
-        x -= 0.5 * WindowXDimension;
-        y -= 0.5 * WindowYDimension;
-        y *= -1;
-
-        x /= ReturnDefaultCamera2d()->Zoom/2;
-        y /= ReturnDefaultCamera2d()->Zoom/2;
-
-        x -= ReturnDefaultCamera2d()->x;
-        y -= ReturnDefaultCamera2d()->y;
-
-        CollisionCheck(Vector2(x, y));
-    }
-    AmountOfMeasurements++;
-    TimeAddedUp = TimeAddedUp + glfwGetTime();
-    glfwSetTime(0);
-    //cout << 1/(TimeAddedUp/AmountOfMeasurements) << endl;
 }
 
-void ScrollFunc (double XOffset, double YOffset) {
-    if (YOffset == 1) {
-        ReturnDefaultCamera2d()->Zoom *= 1.1;
-    } else if (YOffset == -1) {
-        ReturnDefaultCamera2d()->Zoom /= 1.1;
+void ScrollFunc(double XOffset, double YOffset){
+    ReturnDefaultCamera2d()->Zoom *= pow(1.1,YOffset);
+}
+
+void MotionFunc(int x, int y){
+    CursorLocation = Vector2(x, y);
+    CursorLocation /= ReturnDefaultCamera2d()->Zoom / 2;
+    Vector2 DeltaLocation = CursorLocation - LastClickLocation;
+    if (Drag){
+        ReturnDefaultCamera2d()->x += DeltaLocation.x;
+        ReturnDefaultCamera2d()->y -= DeltaLocation.y;
+    } else {
+        CollisionCheck(CursorLocation);
     }
+    LastClickLocation = CursorLocation;
 }

@@ -76,9 +76,47 @@ Vector2 Vector2::operator + (const Vector2& Param) {
 }
 
 void Vector2::operator +=(const Vector2& Param) {
-    Vector2 Temp;
     x += Param.x;
     y += Param.y;
+    return;
+}
+
+Vector2 Vector2::operator -(const Vector2& Param) {
+    Vector2 Temp;
+    Temp.x = x - Param.x;
+    Temp.y = y - Param.y;
+    return Temp;
+}
+
+void Vector2::operator -=(const Vector2& Param) {
+    x -= Param.x;
+    y -= Param.y;
+    return;
+}
+
+Vector2 Vector2::operator *(const float& Param) {
+    Vector2 Temp;
+    Temp.x = x * Param;
+    Temp.y = y * Param;
+    return Temp;
+}
+
+void Vector2::operator *=(const float& Param) {
+    x *= Param;
+    y *= Param;
+    return;
+}
+
+Vector2 Vector2::operator /(const float& Param) {
+    Vector2 Temp;
+    Temp.x = x / Param;
+    Temp.y = y / Param;
+    return Temp;
+}
+
+void Vector2::operator /=(const float& Param) {
+    x /= Param;
+    y /= Param;
     return;
 }
 
@@ -109,6 +147,7 @@ Model2d::Model2d (int Layer) {
     Layers[0].push_back(this);
     Program = glCreateProgram();
     DisplayMode = GL_TRIANGLES;
+    Location = Vector2(0.0, 0.0);
     Rotation = 0;
     Scale.x = 1;
     Scale.y = 1;
@@ -127,7 +166,6 @@ void Model2d::Translate(float x, float y) {
 
 void Model2d::Translate(Vector2 Vector) {
     Location += Vector;
-    cout << Location.x;
 }
 
 void Model2d::Rotate(float r) {
@@ -237,6 +275,7 @@ void DisplayFunc() __attribute__((weak));
 void IdleFunc() __attribute__((weak));
 void InitFunc() __attribute__((weak));
 //void KeyboardFunc(unsigned char Key, int x, int y) __attribute__((weak));
+void ResizeFunc(int x, int y) __attribute__((weak));
 void MouseFunc(int Button, int Action, int Mods) __attribute__((weak));
 void ScrollFunc(double XOffset, double YOffset) __attribute__((weak));
 void MotionFunc(int x, int y) __attribute__((weak));
@@ -279,6 +318,10 @@ void InitFuncRedirect() {
         KeyboardFunc(Key, x, y);
     }
 }*/
+
+void ResizeFuncRedirect(GLFWwindow* Window, int x, int y) {
+    glfwDefaultWindowHints();
+}
 
 void MouseFuncRedirect(GLFWwindow* Window, int Button, int Action, int Mods){
     if (MouseFunc) {
@@ -323,6 +366,17 @@ void ExitMainLoop() {
     ExitMainLoopBool = true;
 }
 
+void MainLoop () {
+    while (!glfwWindowShouldClose(Window) && !ExitMainLoopBool) {
+        //glLoadIdentity();
+        glfwGetFramebufferSize(Window, &WindowWidth, &WindowHeight);
+        DisplayFuncRedirect();
+
+        glfwSwapBuffers(Window);
+        glfwPollEvents();
+    }
+}
+
 int main (int argc, char* argv[]) {
     // This bit is Super important!
     int i = 0;
@@ -337,6 +391,9 @@ int main (int argc, char* argv[]) {
     const GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     WindowWidth = mode->width;
     WindowHeight = mode->height;
+
+    //glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+    //glfwWindowHint(GLFW_DECORATED, GL_FALSE);
     Window = glfwCreateWindow(1280, 720, "test", NULL, NULL);
     glfwMakeContextCurrent(Window);
 
@@ -347,19 +404,13 @@ int main (int argc, char* argv[]) {
     glewExperimental = GL_TRUE;
     glewInit();
 
+    glfwSetWindowSizeCallback(Window, ResizeFuncRedirect);
     glfwSetMouseButtonCallback(Window, MouseFuncRedirect);
     glfwSetScrollCallback(Window, ScrollFuncRedirect);
     glfwSetCursorPosCallback(Window, MotionFuncRedirect);
 
     InitFuncRedirect();
-    while (!glfwWindowShouldClose(Window) && !ExitMainLoopBool) {
-        glLoadIdentity();
-        glfwGetWindowSize(Window, &WindowWidth, &WindowHeight);
-        DisplayFuncRedirect();
-
-        glfwSwapBuffers(Window);
-        glfwPollEvents();
-    }
+    MainLoop();
     glfwDestroyWindow(Window);
     glfwTerminate();
     return 1;

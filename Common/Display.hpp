@@ -45,6 +45,12 @@ public:
     Vector2(float xArg, float yArg);
     Vector2 operator + (const Vector2& Param);
     void operator += (const Vector2& Param);
+    Vector2 operator - (const Vector2& Param);
+    void operator -= (const Vector2& Param);
+    Vector2 operator * (const float& Param);
+    void operator *= (const float& Param);
+    Vector2 operator / (const float& Param);
+    void operator /= (const float& Param);
 };
 
 class Texture {
